@@ -1,0 +1,14 @@
+footer
+  .copyright &copy; 2016 Mochizuki Kazuki Allrights Reserved.
+
+
+block ConfigBlock
+  - title = page_name ? [page_name, site_name].join(' | ') : site_name
+
+    // javascript
+    block JavascriptBlock
+      script(src="js/script.js")
+      script(src="//scdn.line-apps.com/n/line_it/thirdparty/loader.min.js", async="async", defer="defer")
+      script(src="//code.jquery.com/jquery-2.2.0.min.js")
+    include ../../partial/facebook
+

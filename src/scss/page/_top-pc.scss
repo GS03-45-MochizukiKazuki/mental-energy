@@ -1,0 +1,280 @@
+
+
+.env-pc{
+
+
+.sec-main{
+	position: relative;
+	overflow: hidden;
+	.mesh{
+		width: 100%;
+		height: $height_main;
+		background-image: url(../img/top/mesh.png);
+		background-repeat: repeat;
+		position: absolute;
+		top: 0;
+	}
+	.mesh-dark{
+		width: 100%;
+		height: $height_main;
+		position: absolute;
+		background-color: rgba(0,0,0,.3);
+		top: 0;
+	}
+	.photos{
+		width: 100%;
+		height: $height_main;
+		position: relative;
+		opacity: .9;
+		box-shadow: 0 0 5px #000 inset;
+	}
+	.photo1{
+		background-image: url(../img/top/main1.jpg);
+		background-size: cover;
+		background-position: center center;
+		position: relative;
+		height: $height_main;
+	}
+	.photo2{
+		@extend .photo1;
+		background-image: url(../img/top/main2.jpg);
+	}
+	.photo3{
+		@extend .photo1;
+		background-image: url(../img/top/main3.jpg);
+	}
+	.content-block{
+		width: 960px;
+		height: 100%;
+	}
+	.title{
+		position: absolute;
+		bottom: 70px;
+		left: $margin-pc;
+		color: #fff;
+		font-size: 24px;
+		max-width: 500px;
+		text-shadow: 1px 1px 3px #000;
+	}
+	.catchcopy{
+		@extend .title;
+		bottom: 110px;
+		left: $margin-pc;
+		font-size: 18px;
+	}
+	.sound{
+		position: absolute;
+		top: 0;
+		width: 50px;
+		height: 50px;
+		color: #fff;
+		right: 0;
+		margin-top: - $height-main;
+		margin-right: $margin-pc;
+		cursor: pointer;
+		i{
+			position:absolute;
+		}
+		.fa-volume-up{
+			right: 9px;
+		}
+		.fa-volume-off{
+			right: 0;
+			display: none;
+		}
+	}
+
+}
+
+
+$width-container: 750px;
+
+.sec-about{
+	line-height: 3;
+	color: $color-font;
+	margin-bottom: 100px;
+	.content-block{
+		width: $width-container;
+	}
+	.box{
+		margin: 0 auto;
+	}
+	.box1{
+		margin-top: 50px;
+		margin-bottom: 80px;
+	}
+	.box1{
+		margin-bottom: 100px;
+	}
+	.title{
+		font-size: 18px;
+		font-weight: bold;
+	}
+	.txt{
+		// width: $width-pc/2 - $margin-pc;
+
+	}
+	.txt1{
+		float: left;
+		// margin-left: $margin-pc;
+	}
+	.txt2{
+		float: right;
+		// margin-right: $margin-pc;
+	}
+	.pc{
+		@include setImg(800/2.5, 629/2.5);
+		vertical-align: middle;
+	}
+	.pc1{
+		background-image: url(../img/top/about-pc.png);
+		float: right;
+	}
+	.pc2{
+		background-image: url(../img/top/about-pc.png);
+		float: left;
+	}
+}
+
+.sec-movie{
+	text-align: center;
+	margin-bottom: 100px;
+	iframe{
+		width: 560px;
+		height: 315px;
+	}
+}
+
+
+.sec-manual{
+	.box-container{
+		width: $width-container;
+		margin: 0 auto;
+		display: flex;
+		justify-content: space-between;
+		flex-wrap: wrap;
+
+	}
+	.box{
+		width: 200px;
+		height: 200px;
+		margin-bottom: 30px;
+		// background-color: $color_main;
+		text-align: center;
+		color: $color_font;
+		.icon{
+			font-size: 30px;
+			color: $color_main;
+		}
+		.title{
+			font-size: $font-size-l;
+			font-weight: bold;
+			margin: 5px 0;
+		}
+		.txt{
+			text-align: left;
+			font-size: $font-size-m;
+		}
+	}
+
+
+}
+
+
+/* ======================================
+ * 見出し
+ * ====================================== */
+
+.separate-block{
+	margin-top: 30px;
+	margin-bottom: 50px;
+}
+.separate{
+	width: 300px;
+	margin: 0 auto;
+	text-align: center;
+	position: relative;
+}
+.separate:before{
+	content: '';
+	display: block;
+	border: 1px solid $color_font;
+	width: 100px;
+	position:absolute;
+	top:50%;
+	left:0;
+	transform:translate(0, -50%);
+}
+.separate:after{
+	content: '';
+	display: block;
+	border: 1px solid $color_font;
+	width: 100px;
+	position:absolute;
+	top:50%;
+	right:0;
+	transform:translate(0, -50%);
+}
+.separate-title{
+	width: 100px;
+	text-align: center;
+	font-size: 24px;
+	font-weight: bold;
+	margin: 0 auto;
+	margin-bottom: 10px;
+}
+.fa-check{
+	top: 2px;
+}
+
+
+/* ======================================
+ * 登録ボタン
+ * ====================================== */
+.btn-register{
+	margin-top: 100px;
+	margin-bottom: 150px;
+	font-size: 16px;
+	.button {
+		position: relative;
+		width: 250px;
+		text-align: center;
+		margin: 0 auto;
+		z-index: 2;
+		background-color: $color_main;
+		border: 2px solid $color_main;
+		color: #fff;
+		line-height: 50px;
+		cursor: pointer;
+	}
+	.button:hover {
+		background-color: rgba(255,255,255,0);
+		border-color: $color_main;
+		color: $color_main;
+	}
+	.button::before,
+	.button::after {
+		top: 0;
+		width: 50%;
+		height: 100%;
+		background-color: $color_main;
+	}
+	.button::before {
+		right: 0;
+	}
+	.button::after {
+		left: 0;
+	}
+	.button:hover::before,
+	.button:hover::after {
+		width: 0;
+		background-color: $color_main;
+	}
+	a{
+		text-decoration: none;
+	}
+}
+
+
+
+}

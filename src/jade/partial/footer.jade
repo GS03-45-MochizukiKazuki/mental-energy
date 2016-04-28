@@ -1,0 +1,21 @@
+- var encode_description = encodeURIComponent(sns_description);
+- var encode_hashtag = encodeURIComponent(hashtag);
+- var encode_siteurl = encodeURIComponent(site_url);
+- var encode_via = encodeURIComponent(via);
+
+footer.section-block
+	.content-block
+		ul.sns
+			li.btn.btn-facebook.js-share_fb.icon-facebook.hover-effect
+			li.btn.btn-twitter.icon-twitter.hover-effect.
+				<a href="http://twitter.com/intent/tweet?text=#{encode_description}&amp;url=#{encode_siteurl}&amp;hashtags=#{encode_hashtag}&amp;via=#{encode_via}" target="_blank"></a>
+			li.btn.btn-line.icon-line.hover-effect.
+				<div class="line-it-button" style="display: none;" data-type="share-c" data-lang="ja"></div>
+
+		.pushnate
+			.txt
+			<div class="pushnate-register-button" data-site-id="afb9ba3a4dc5d7f96d15bfffd3a6339f"></div>
+
+		.copyright &copy; 2016 Mental Energy Allrights Reserved.
+
+		#js-gototop

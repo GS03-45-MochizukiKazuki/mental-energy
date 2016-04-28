@@ -1,0 +1,44 @@
+input[name="deleteGenre"],
+input[name="archive"]{
+	display: none;
+}
+
+.env-pc{
+
+.btn-positive{
+	width: 80px;
+	height: 30px;
+	border: none;
+	border-radius: 5px;
+	color: #fff;
+	font-weight: bold;
+	background-color: $color_main;
+	cursor: pointer;
+}
+.btn-negative{
+	width: 80px;
+	height: 30px;
+	border: none;
+	border-radius: 5px;
+	color: $color_font;
+	font-weight: bold;
+	background-color: $color_todo_cancel;
+	cursor: pointer;
+}
+
+.js-added_tr{
+	height: 50px;
+
+	input{
+	}
+	.todo__submit-btn{
+	}
+	.todo__cancel-btn{
+	}
+}
+
+
+
+
+
+}

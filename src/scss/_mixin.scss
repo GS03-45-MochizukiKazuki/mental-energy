@@ -1,0 +1,18 @@
+
+/* ======================================
+ * 画像
+ * ====================================== */
+@mixin setImg($w: 300, $h: 300){
+	background-repeat: no-repeat;
+	background-position:  center center;
+	background-size: $w + px, $h + px;
+	width: $w + px;
+	height: $h + px;
+}
+@mixin setImgSp($w: 300, $h: 300){
+	background-repeat: no-repeat;
+	background-position:  center center;
+	background-size: $w/2 + px , $h/2 + px ;
+	width: $w/2 + px ;
+	height: $h/2 + px ;
+}

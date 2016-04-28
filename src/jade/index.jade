@@ -1,0 +1,138 @@
+extends layout/DefaultLayout
+
+prepend ConfigBlock
+	- page_name = ''
+
+append StylesheetBlock
+	link(rel="stylesheet", type="text/css", href="css/components/slick.css")
+	link(rel="stylesheet", type="text/css", href="css/components/slick-theme.css")
+	link(rel="stylesheet", type="text/css", href="css/components/icon.css")
+	link(rel="stylesheet", href="css/index.css")
+
+append JavascriptBlock
+	script(src="js/lib/slick.min.js")
+	script(src="js/module/fadeInDown.js")
+	script(src="js/index.js")
+	script.
+		(function(w, d, s, path) {
+		  tag = d.createElement(s);
+		  firstTag = d.getElementsByTagName(s)[0];
+		  tag.async = 1;
+		  tag.src = path;
+		  firstTag.parentNode.insertBefore(tag, firstTag);
+		})(window, document, 'script', 'https://s.pushnate.com/pushnateButton.js');
+
+block ContentBlock
+
+	- var encode_description = encodeURIComponent(sns_description);
+	- var encode_hashtag = encodeURIComponent(hashtag);
+	- var encode_siteurl = encodeURIComponent(site_url);
+	- var encode_via = encodeURIComponent(via);
+
+	.sec-main.section-block
+		ul.photos
+			li.photo1
+			li.photo2
+			li.photo3
+		.mesh
+		.mesh-dark
+		.content-block
+			.txt
+				h2.title メンタルエナジー専用TODOリスト
+				.catchcopy 決断しない人生へ
+			.sound.
+				<i class="fa fa-volume-up fa-3x fa-flip-horizontal fa-fw" aria-hidden="true"></i>
+				<i class="fa fa-volume-off fa-3x fa-flip-horizontal fa-fw" aria-hidden="true"></i>
+
+	.separate-block.content-block#about
+		.separate-title ABOUT
+		.separate.
+			<span class="fa-stack fa-lg">
+				<i class="fa fa-calendar-o fa-stack-2x" aria-hidden="true"></i>
+				<i class="fa fa-check fa-stack-1x" aria-hidden="true"></i>
+			</span>
+
+	.sec-about.section-block
+		.content-block
+			.box.box1.cf
+				.txt.txt1.js-scrollTargetLeft
+					.title メンタル・エナジーとは
+					pre.
+						メンタル・エナジーとは人間の集中力や意志力のことです。
+						この力は１日のうちで使える量に限りがあり、
+						日常の何気ない意思決定のたびに減っていきます。
+						何を食べるのか、何を着るのか、何のテレビを見るのか・・・
+						これら些細な意思決定のたびにメンタル・エナジーは減っていくのです。
+				.pc.pc1.js-scrollTargetRight
+			.box.box2.cf
+				.txt.txt2.js-scrollTargetRight
+					.title マイルールを登録する
+					pre.
+						本サービスでは、些細な意思決定をルーティン化するための
+						マイルールを登録・管理することにより、
+						意思決定の回数を極限まで減らすことを目標とします。
+						そうして温存したメンタル・エナジーを
+						ビジネスやプライベートにおける重要な意思決定に使うことで、
+						よりシンプルで豊かな人生を送りましょう。
+				.pc.pc2.js-scrollTargetLeft
+
+	.separate-block.content-block
+		.separate-title MOVIE
+		.separate.
+			<span class="fa-stack fa-lg">
+				<i class="fa fa-calendar-o fa-stack-2x" aria-hidden="true"></i>
+				<i class="fa fa-check fa-stack-1x" aria-hidden="true"></i>
+			</span>
+
+	.sec-movie.section-block
+		.content-block.js-scrollTarget
+			<iframe src="https://www.youtube.com/embed/YgTJdtsQ9CI" frameborder="0" allowfullscreen></iframe>
+
+	.separate-block.content-block
+		.separate-title POINTS
+		.separate.
+			<span class="fa-stack fa-lg">
+				<i class="fa fa-calendar-o fa-stack-2x" aria-hidden="true"></i>
+				<i class="fa fa-check fa-stack-1x" aria-hidden="true"></i>
+			</span>
+
+	.sec-manual.section-block
+		.content-block
+			.box-container
+				.box.box1.js-scrollTarget
+					.icon.
+						<i class="fa fa-check-circle-o" aria-hidden="true"></i>
+					.title TODOアプリ
+					.txt 基本操作はTODOアプリと同じ。時間をかけずに利用方法を理解できます。
+				.box.box2.js-scrollTarget
+					.icon.
+						<i class="fa fa-repeat" aria-hidden="true"></i>
+					.title 習慣化
+					.txt 習慣化するためにマイルール登録から最低1週間はチェックボタンを押せない仕様になっています。
+				.box.box3.js-scrollTarget
+					.icon.
+						<i class="fa fa-clock-o" aria-hidden="true"></i>
+					.title シーンとアクション
+					.txt 「いつ・どこで」「何を」するのかを1セットで登録することで、ルールの習慣化を実現します。
+				.box.box4.js-scrollTarget
+					.icon.
+						<i class="fa fa-pie-chart" aria-hidden="true"></i>
+					.title グラフ
+					.txt メンタルエナジーをグラフで可視化しました。直感的な理解を手助けします。
+				.box.box5.js-scrollTarget
+					.icon.
+						<i class="fa fa-bell-o" aria-hidden="true"></i>
+					.title プッシュ通知
+					.txt メンタルエナジーの見直しを通知することで、定期的にやる気を喚起します。
+				.box.box6.js-scrollTarget
+				.box.box7.js-scrollTarget
+				.box.box8.js-scrollTarget
+				.box.box9.js-scrollTarget
+
+	.btn-register.content-block
+		a.button(href="login.php") 無料で登録してみる
+
+	audio#bgm(autoplay)
+		source(src="sound/bgm.mp3", type="audio/mp3")
+
+
