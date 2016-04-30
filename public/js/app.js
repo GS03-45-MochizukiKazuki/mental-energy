@@ -49,7 +49,6 @@ $('input[name="archive_id"]').change(function(){
  * ログアウト
  * ====================================== */
 
-
  var flag_setting = true;
  var $setting = $('.setting');
 
@@ -74,24 +73,45 @@ var $btn_sp = $('.env-sp .btn-setting');
 $btn_sp.children().remove();
 $btn_sp.append($setting);
 
+// 設定
+$('.menu-list').append('<div class="btn-close"></div>');
+var $btn_setting_sp = $('.btn-sp-menu');
+var $btn_close = $('.btn-close');
+// var flag_setting_sp = true;
+var $list = $('.menu-list');
+
+
+$btn_setting_sp.on('click', function(){
+	$list.fadeIn();
+});
+$btn_close.on('click', function(){
+	$list.fadeOut();
+});
+
 
 /* ======================================
- * menu
+ * ジャンル
  * ====================================== */
 
-var $menu = $('.menu-trigger');
-var $list = $('.menu-list');
-var menu_flag = true;
+var $left_block = $('.env-sp .content-left');
+var $btn_genre = $('.menu-trigger');
+// var overlay = '<div id="overlay"></div>';
+var genre_flag = true;
 
-$menu.on('click', function(){
-	if (menu_flag) {
+$('body').prepend( $left_block );
+// $('body').append( overlay );
+
+// var $overlay = $('#overlay');
+
+$btn_genre.on('click', function(){
+	if (genre_flag) {
 		$(this).addClass('active');
-		$list.fadeIn();
-		menu_flag = false;
+		$left_block.addClass('slide-genre');
+		genre_flag = false;
 	} else {
 		$(this).removeClass('active');
-		$list.fadeOut();
-		menu_flag = true;
+		$left_block.removeClass('slide-genre');
+		genre_flag = true;
 	}
 });
 

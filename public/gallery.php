@@ -24,6 +24,7 @@ include("assets/html/meta.html");
 <div class="wrapper">
 <?php 
 $user_email = h($app->me()->email);
+$user_id = h($app->me()->id);
 $token_header = h($_SESSION['token']);
 include("assets/html/header.php");
  ?>
@@ -39,7 +40,7 @@ $db->query("set names utf8"); // 文字化け対策
 
 // メインテーブル
 // カラム名重複のためasを使用
-$qry = "SELECT an.id, an.scene, an.action, an.archive_flag, genre.id AS genre_id, genre.name, users.id AS user_id, users.email FROM (an INNER JOIN genre ON an.genre_id = genre.id) INNER JOIN users ON an.user_id = users.id ORDER BY an.id;";
+$qry = "SELECT an.id, an.scene, an.action, an.archive_flag, genre.id AS genre_id, genre.name, users.id AS user_id, users.email FROM (an INNER JOIN genre ON an.genre_id = genre.id) INNER JOIN users ON an.user_id = users.id AND an.user_id = {$user_id} ORDER BY an.id;";
 // $qry = "SELECT an.id, an.scene, an.action, an.archive_flag, genre.id AS genre_id, genre.name FROM an INNER JOIN genre ON an.genre_id = genre.id ORDER BY an.id;";
 // $qry = "SELECT * FROM an INNER JOIN genre ON an.genre_id = genre.id;";
 $data = $db->query($qry);

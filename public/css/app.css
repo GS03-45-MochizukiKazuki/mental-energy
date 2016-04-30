@@ -317,14 +317,20 @@ input[name="archive"] {
  * テーブル編集、ハイライト
  * ====================================== */
   /* ======================================
- * ログアウト
+ * 設定
+ * ====================================== */
+  /* ======================================
+ * ジャンル
  * ====================================== */ }
   .env-sp .user-name {
     position: absolute;
     top: 15px;
-    left: 60px;
+    left: 50px;
     color: #fff;
-    font-weight: bold; }
+    font-weight: bold;
+    max-width: 170px;
+    overflow: scroll;
+    font-size: 12px; }
   .env-sp h2 {
     font-size: 15px;
     display: inline-block; }
@@ -486,9 +492,56 @@ input[name="archive"] {
     .env-sp .menu-trigger span {
       background-color: #fff; }
   .env-sp .menu-trigger.active span {
-    background-color: #333; }
+    background-color: #fff; }
   .env-sp .menu-list {
-    display: none; }
+    display: none;
+    box-shadow: 0px 0px 5px #333;
+    z-index: 500; }
+  .env-sp .btn-close {
+    width: 50px;
+    height: 50px;
+    position: absolute;
+    top: 10px;
+    right: 10px; }
+  .env-sp .btn-close:before {
+    content: '';
+    position: absolute;
+    width: 40px;
+    height: 3px;
+    top: 13px;
+    background-color: #333;
+    -webkit-transform: rotate(45deg);
+            transform: rotate(45deg); }
+  .env-sp .btn-close:after {
+    content: '';
+    position: absolute;
+    width: 40px;
+    height: 3px;
+    top: 13px;
+    background-color: #333;
+    -webkit-transform: rotate(-45deg);
+            transform: rotate(-45deg); }
+  .env-sp .btn-sp-menu {
+    position: absolute;
+    right: 50px;
+    top: 8px;
+    font-size: 17px;
+    color: #fff; }
+  .env-sp .slide-genre {
+    display: block;
+    position: absolute;
+    z-index: 1000;
+    background-color: #f8f8f8;
+    box-shadow: 0px 0px 5px #333; }
+  .env-sp #overlay {
+    width: 150%;
+    height: 150%;
+    background-color: rgba(0, 0, 0, 0.8);
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 800; }
 
 html, body {
   width: 100%;
@@ -503,31 +556,32 @@ a {
   width: 100%;
   height: 100%; }
 
-.env-pc body {
+.env-pc {
   min-width: 800px;
   overflow-y: hidden; }
+  .env-pc .btn-sp-menu {
+    display: none; }
+  .env-pc .section-block {
+    width: 100%; }
+  .env-pc .content-block {
+    width: 800px;
+    height: 100%;
+    margin: 0 auto;
+    position: relative; }
 
-.env-pc .section-block {
-  width: 100%; }
-
-.env-pc .content-block {
-  width: 800px;
-  height: 100%;
-  margin: 0 auto;
-  position: relative; }
-
-.env-sp body {
-  min-width: 320px; }
-
-.env-sp .section-block {
-  width: 100%; }
-
-.env-sp .content-block {
+.env-sp {
   min-width: 320px;
-  width: 100%;
-  height: 100%;
-  margin: 0 auto;
-  position: relative; }
+  overflow-y: visible; }
+  .env-sp .btn-sp-menu {
+    display: block; }
+  .env-sp .section-block {
+    width: 100%; }
+  .env-sp .content-block {
+    min-width: 320px;
+    width: 100%;
+    height: 100%;
+    margin: 0 auto;
+    position: relative; }
 
 .env-pc header {
   position: relative;
@@ -601,8 +655,6 @@ a {
     position: absolute;
     top: 0;
     left: 0;
-    opacity: .9;
-    -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=90)";
     z-index: 99; }
     .env-sp header ul li {
       display: block;

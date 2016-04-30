@@ -27,10 +27,12 @@ a{
 	height: 100%;
 }
 
+
 .env-pc{
-	body{
-		min-width: 800px;
-		overflow-y: hidden;
+	min-width: 800px;
+	overflow-y: hidden;
+	.btn-sp-menu{
+		display: none;
 	}
 	.section-block{
 		width: 100%;
@@ -44,8 +46,10 @@ a{
 }
 
 .env-sp{
-	body{
-		min-width: 320px;
+	min-width: 320px;
+	overflow-y: visible;
+	.btn-sp-menu{
+		display: block;
 	}
 	.section-block{
 		width: 100%;
@@ -57,6 +61,7 @@ a{
 		height: 100%;
 		margin: 0 auto;
 		position: relative;
+		// z-index: 999;
 	}
 }
 
@@ -149,7 +154,7 @@ a{
 			position: absolute;
 			top: 0;
 			left: 0;
-			opacity: .9;
+			// opacity: .9;
 			z-index: $z-menu;
 			li{
 				display: block;

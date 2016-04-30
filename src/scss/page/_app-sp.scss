@@ -8,9 +8,12 @@ $color_bar: #888;
 .user-name{
 	position: absolute;
 	top: 15px;
-	left: 60px;
+	left: 50px;
 	color: #fff;
 	font-weight: bold;
+	max-width: 170px;
+    overflow: scroll;
+    font-size: 12px;
 }
 
 
@@ -290,8 +293,15 @@ td:first-child{
 
 
 /* ======================================
- * ログアウト
+ * 設定
  * ====================================== */
+
+$z-menu: 99;
+$z-list: 500;
+$z-left: 1000;
+$z-overlay: 800;
+$z-menu-btn: 900;
+
 
 .btn-setting{
 	// display: none;
@@ -306,13 +316,74 @@ td:first-child{
 }
 .menu-trigger.active {
 	span{
-		background-color: $color_font;
+		// background-color: $color_font;
+		background-color: #fff;
 	}
 }
 
 
 .menu-list{
 	display: none;
+	box-shadow: 0px 0px 5px #333;
+	z-index: $z-list;
+}
+
+.btn-close{
+	width: 50px;
+	height: 50px;
+	position: absolute;
+	top: 10px;
+	right:10px;
+}
+.btn-close:before{
+	content: '';
+	position: absolute;
+	width: 40px;
+	height: 3px;
+	top: 13px;
+	background-color: $color_font;
+	transform: rotate(45deg);
+}
+.btn-close:after{
+	content: '';
+	position: absolute;
+	width: 40px;
+	height: 3px;
+	top: 13px;
+	background-color: $color_font;
+	transform: rotate(-45deg);
+}
+
+
+/* ======================================
+ * ジャンル
+ * ====================================== */
+
+.btn-sp-menu{
+	position: absolute;
+	right: 50px;
+	top: 8px;
+	font-size: 17px;
+	color: #fff;
+}
+
+.slide-genre{
+	display: block;
+	position: absolute;
+	z-index: $z-left;
+	background-color: $color_todo_bg;
+	box-shadow: 0px 0px 5px #333;
+}
+
+#overlay{
+	width: 150%;
+	height: 150%;
+	background-color: rgba(0,0,0,.8);
+	display: none;
+	position: fixed;
+	top: 0;
+	left: 0;
+	z-index: $z-overlay;
 }
 
 
