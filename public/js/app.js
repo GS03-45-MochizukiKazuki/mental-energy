@@ -69,6 +69,32 @@ $('.btn-logout').on('click', function(){
 });
 
 
+// sp
+var $btn_sp = $('.env-sp .btn-setting');
+$btn_sp.children().remove();
+$btn_sp.append($setting);
+
+
+/* ======================================
+ * menu
+ * ====================================== */
+
+var $menu = $('.menu-trigger');
+var $list = $('.menu-list');
+var menu_flag = true;
+
+$menu.on('click', function(){
+	if (menu_flag) {
+		$(this).addClass('active');
+		$list.fadeIn();
+		menu_flag = false;
+	} else {
+		$(this).removeClass('active');
+		$list.fadeOut();
+		menu_flag = true;
+	}
+});
+
 
 
 

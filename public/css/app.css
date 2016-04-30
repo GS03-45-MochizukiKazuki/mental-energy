@@ -29,6 +29,78 @@ input[name="archive"] {
 .env-pc .js-added_tr {
   height: 50px; }
 
+.env-sp .btn-positive {
+  width: 80px;
+  height: 30px;
+  border: none;
+  border-radius: 5px;
+  color: #fff;
+  font-weight: bold;
+  background-color: #EA5504;
+  cursor: pointer; }
+
+.env-sp .btn-negative {
+  width: 80px;
+  height: 30px;
+  border: none;
+  border-radius: 5px;
+  color: #333;
+  font-weight: bold;
+  background-color: #ccc;
+  cursor: pointer; }
+
+.env-sp .js-added_tr {
+  height: 50px; }
+
+.env-sp header .content-block {
+  width: 100vw; }
+
+.env-sp .menu-trigger,
+.env-sp .menu-trigger span {
+  display: inline-block;
+  transition: all .4s;
+  box-sizing: border-box; }
+
+.env-sp .menu-trigger {
+  position: absolute;
+  width: 50px;
+  height: 44px;
+  -webkit-transform: scale(0.6);
+          transform: scale(0.6);
+  float: right;
+  right: 10px;
+  margin-top: 2px;
+  z-index: 99; }
+
+.env-sp .menu-trigger span {
+  position: absolute;
+  left: 0;
+  width: 100%;
+  height: 4px;
+  background-color: #272727;
+  border-radius: 4px; }
+
+.env-sp .menu-trigger span:nth-of-type(1) {
+  top: 0; }
+
+.env-sp .menu-trigger span:nth-of-type(2) {
+  top: 20px; }
+
+.env-sp .menu-trigger span:nth-of-type(3) {
+  bottom: 0; }
+
+.env-sp .menu-trigger.active span:nth-of-type(1) {
+  -webkit-transform: translateY(20px) rotate(-45deg);
+          transform: translateY(20px) rotate(-45deg); }
+
+.env-sp .menu-trigger.active span:nth-of-type(2) {
+  opacity: 0;
+  -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=0)"; }
+
+.env-sp .menu-trigger.active span:nth-of-type(3) {
+  -webkit-transform: translateY(-20px) rotate(45deg);
+          transform: translateY(-20px) rotate(45deg); }
+
 .env-pc {
   /* ======================================
  * genre
@@ -231,13 +303,196 @@ input[name="archive"] {
     border-width: 12px;
     margin-left: -12px; }
 
+.env-sp {
+  /* ======================================
+ * genre
+ * ====================================== */
+  /* ======================================
+ * todoリスト
+ * ====================================== */
+  /* ======================================
+ * 追加ボタン
+ * ====================================== */
+  /* ======================================
+ * テーブル編集、ハイライト
+ * ====================================== */
+  /* ======================================
+ * ログアウト
+ * ====================================== */ }
+  .env-sp .user-name {
+    position: absolute;
+    top: 15px;
+    left: 60px;
+    color: #fff;
+    font-weight: bold; }
+  .env-sp h2 {
+    font-size: 15px;
+    display: inline-block; }
+  .env-sp .fa {
+    margin-right: 5px; }
+  .env-sp .content-left {
+    position: relative;
+    width: 250px;
+    height: 100%;
+    float: left;
+    display: none; }
+    .env-sp .content-left .content-wrapper {
+      padding: 10px 10px 0px; }
+  .env-sp .content-right {
+    position: relative;
+    float: right;
+    width: 100%;
+    height: 100%;
+    background-color: #fff;
+    box-shadow: 0px 0px 2px rgba(0, 0, 0, 0.4);
+    padding-right: 10px; }
+    .env-sp .content-right .content-wrapper {
+      padding: 13px 15px 0 0;
+      margin-left: 30px; }
+  .env-sp .sec-todo {
+    min-height: 500px;
+    height: 100%;
+    overflow: hidden; }
+  .env-sp .rule {
+    margin-bottom: 20px;
+    width: 200px;
+    border-bottom: 1px #888 solid;
+    padding: 15px 0 15px 0; }
+    .env-sp .rule__item {
+      margin-bottom: 10px;
+      cursor: pointer; }
+  .env-sp .genre {
+    width: 200px;
+    position: relative; }
+    .env-sp .genre__list {
+      margin-bottom: 30px;
+      max-height: 200px;
+      overflow: scroll; }
+    .env-sp .genre__item {
+      height: 20px;
+      width: 100%;
+      margin: 10px auto;
+      cursor: pointer; }
+    .env-sp .genre__color {
+      display: inline-block;
+      width: 10px;
+      height: 10px;
+      border-radius: 50% 50%;
+      margin-right: 10px; }
+    .env-sp .genre__delete {
+      margin-left: 10px;
+      visibility: hidden; }
+    .env-sp .genre__edit {
+      margin-left: 25px;
+      visibility: hidden; }
+  .env-sp .genre__txt input {
+    font-size: 14px; }
+  .env-sp .js-added {
+    margin: 5px 0 5px 20px; }
+  .env-sp .genre-submit-btn {
+    margin-right: 5px; }
+  .env-sp .genre__item:hover .genre__txt {
+    font-weight: bold; }
+  .env-sp .genre__item:hover .genre__delete, .env-sp .genre__item:hover .genre__edit {
+    visibility: visible; }
+  .env-sp .js-added_tr {
+    position: relative;
+    width: 100%; }
+  .env-sp .todo__submit-btn {
+    display: inline-block;
+    margin-right: 5px; }
+  .env-sp .todo__cancel-btn {
+    display: inline-block; }
+  .env-sp .todo__table {
+    margin-top: 20px;
+    margin-bottom: 30px;
+    table-layout: fixed;
+    border-collapse: collapse;
+    overflow: scroll;
+    display: block; }
+  .env-sp .todo__th {
+    height: 20px;
+    line-height: 10px;
+    font-size: 10px;
+    text-align: left;
+    margin-bottom: 5px; }
+  .env-sp .todo__tr {
+    border-bottom: #888 1px solid; }
+  .env-sp td {
+    vertical-align: middle; }
+  .env-sp .editable-td {
+    padding: 3px; }
+  .env-sp .editable-tr {
+    border-bottom: #ccc 1px dotted;
+    display: none; }
+  .env-sp .btn-add {
+    color: #EA5504;
+    cursor: pointer; }
+  .env-sp .btn-genre, .env-sp .btn-todo {
+    height: 24px;
+    position: relative;
+    margin-top: 30px;
+    margin-bottom: 10px; }
+    .env-sp .btn-genre .btn-add, .env-sp .btn-todo .btn-add {
+      display: inline-block; }
+    .env-sp .btn-genre .btn-add:after, .env-sp .btn-todo .btn-add:after {
+      content: 'ジャンルを追加';
+      font-size: 12px;
+      vertical-align: middle;
+      margin-left: 10px; }
+  .env-sp .btn-todo .btn-add:after {
+    content: 'マイルールを追加'; }
+  .env-sp .todo-insert, .env-sp .genre-insert {
+    display: none;
+    width: 200px; }
+    .env-sp .todo-insert input[type='text'], .env-sp .genre-insert input[type='text'] {
+      width: 200px;
+      margin: 2px 0; }
+    .env-sp .todo-insert input[type='submit'], .env-sp .genre-insert input[type='submit'] {
+      margin-top: 5px; }
+  .env-sp .is-editing {
+    width: 100%;
+    height: 100%;
+    display: block;
+    border: none;
+    margin: 0;
+    padding: 0;
+    word-wrap: break-word; }
+  .env-sp table {
+    table-layout: fixed; }
+  .env-sp th {
+    min-width: 120px;
+    width: 50%;
+    word-break: break-all; }
+  .env-sp th:first-child {
+    min-width: 30px;
+    width: 20px;
+    display: block; }
+  .env-sp td {
+    min-width: 120px;
+    width: 50%;
+    height: 30px;
+    cursor: text;
+    word-break: break-all; }
+  .env-sp td:first-child {
+    min-width: 30px;
+    width: 20px; }
+  .env-sp .js-highlight td, .env-sp td.js-highlight {
+    background: #f8f8f8; }
+  .env-sp .btn-setting {
+    font-weight: bold; }
+  .env-sp .menu-trigger {
+    top: 0; }
+    .env-sp .menu-trigger span {
+      background-color: #fff; }
+  .env-sp .menu-trigger.active span {
+    background-color: #333; }
+  .env-sp .menu-list {
+    display: none; }
+
 html, body {
   width: 100%;
   height: 100%; }
-
-body {
-  min-width: 800px;
-  overflow-y: hidden; }
 
 body {
   color: #333;
@@ -248,6 +503,10 @@ a {
   width: 100%;
   height: 100%; }
 
+.env-pc body {
+  min-width: 800px;
+  overflow-y: hidden; }
+
 .env-pc .section-block {
   width: 100%; }
 
@@ -257,11 +516,15 @@ a {
   margin: 0 auto;
   position: relative; }
 
+.env-sp body {
+  min-width: 320px; }
+
 .env-sp .section-block {
   width: 100%; }
 
 .env-sp .content-block {
-  width: 320px;
+  min-width: 320px;
+  width: 100%;
   height: 100%;
   margin: 0 auto;
   position: relative; }
@@ -307,6 +570,64 @@ a {
   position: absolute;
   bottom: 0; }
   .env-pc footer .copyright {
+    color: #fff;
+    font-size: 10px;
+    width: 300px;
+    line-height: 50px;
+    text-align: center;
+    margin: 0 auto; }
+
+.env-sp header {
+  position: relative;
+  width: 100%;
+  height: 50px;
+  background-color: #EA5504; }
+  .env-sp header nav {
+    position: absolute;
+    width: 100%; }
+  .env-sp header .logo {
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: 30px, 30px;
+    width: 30px;
+    height: 30px;
+    background-image: url(../img/common/logo_reverse.png);
+    margin-left: 10px;
+    margin-top: 10px;
+    margin-bottom: 10px; }
+  .env-sp header ul {
+    margin-right: 10px;
+    width: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    opacity: .9;
+    -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=90)";
+    z-index: 99; }
+    .env-sp header ul li {
+      display: block;
+      width: 100%;
+      height: 50px;
+      line-height: 50px;
+      color: #333;
+      background-color: #fff;
+      cursor: pointer;
+      border-bottom: 1px dotted #333;
+      padding-left: 10px; }
+      .env-sp header ul li a {
+        text-decoration: none;
+        color: #333;
+        font-size: 12px;
+        font-weight: bold; }
+
+.env-sp footer {
+  position: relative;
+  height: 50px;
+  background-color: #272727;
+  min-width: 300px;
+  width: 100%;
+  bottom: 0; }
+  .env-sp footer .copyright {
     color: #fff;
     font-size: 10px;
     width: 300px;

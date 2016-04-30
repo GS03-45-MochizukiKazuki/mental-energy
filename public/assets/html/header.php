@@ -4,7 +4,7 @@
     <nav class="cf">
       <h1 class="logo hover-effect"><a href="app.php"></a></h1>
       <div class="user-name"><?= $user_email ?></div>
-      <ul>
+      <ul class="menu-list">
         <li class="item hover-effect"><a href="archive.php">アーカイブを見る</a></li>
         <li class="item hover-effect"><a href="gallery.php">一覧を見る</a></li>
         <li class="item hover-effect"><a href="data.php">メンタルエナジーを見る</a></li>
@@ -16,6 +16,11 @@
           <input type="hidden" name="token" value="<?= $token_header ?>">
         </form>
       </div>
+      <a href="#" class="menu-trigger">
+        <span></span>
+        <span></span>
+        <span></span>
+      </a>
     </nav>
   </div>
 </header>

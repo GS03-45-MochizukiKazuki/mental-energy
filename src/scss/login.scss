@@ -7,9 +7,28 @@ header ul .item{
 
 
 
+.env-sp{
+  overflow-y: hidden;
+  #container{
+    min-height: 500px;
+  }
+  footer{
+    position: absolute;
+    bottom: 0;
+  }
+
+  
+}
+
+
+
+
 .user-name{
   display: none;
 }
+// #login{
+//   margin-bottom: 300px;
+// }
 
 
 #container {

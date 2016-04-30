@@ -5,6 +5,14 @@
 header ul .item {
   display: none !important; }
 
+.env-sp {
+  overflow-y: hidden; }
+  .env-sp #container {
+    min-height: 500px; }
+  .env-sp footer {
+    position: absolute;
+    bottom: 0; }
+
 .user-name {
   display: none; }
 
