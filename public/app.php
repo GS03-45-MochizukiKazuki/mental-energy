@@ -1,3 +1,13 @@
+<?php 
+require_once(__DIR__ . '/config/config.php');
+
+$app = new MyApp\Controller\Index();
+
+$app->run();
+
+?>
+
+
 <!DOCTYPE html>
 <html lang="ja">
 
@@ -10,14 +20,25 @@ include("assets/html/meta.html");
 
 <body>
 <?php 
-include("assets/html/header.html");
+$user_email = h($app->me()->email);
+$user_id = h($app->me()->id);
+$token_header = h($_SESSION['token']);
+include("assets/html/header.php");
  ?>
 <!-- body -->
 
 
 
+
+<!-- <h1>Users <span class="fs12">(<?= count($app->getValues()->users); ?>)</span></h1>
+<ul>
+  <?php foreach ($app->getValues()->users as $user) : ?>
+    <li><?= h($user->email); ?></li>
+  <?php endforeach; ?>
+</ul> -->
+
+
 <?php 
-session_start(); 
 
 include("assets/pass.php");
 include("assets/func.php");
@@ -26,14 +47,14 @@ $db = db();
 $db->query("set names utf8"); // 文字化け対策
 
 // メインテーブル
-$qry = "SELECT * FROM an WHERE archive_flag = 0";
+$qry = "SELECT * FROM an WHERE archive_flag = 0 AND an.user_id = {$user_id}";
 $data = $db->query($qry);
 
 // ジャンルテーブル
-$qry_genre = "SELECT * FROM genre";
+$qry_genre = "SELECT * FROM genre WHERE genre.user_id = {$user_id}";
+// $qry_genre = "SELECT * FROM genre";
 $data_genre = $db->query($qry_genre);
 ?>
-
 
 <section class="sec-todo section-block cf">
 <div class="content-block">
@@ -80,6 +101,7 @@ $data_genre = $db->query($qry_genre);
 			<i class="fa fa-plus fa-2x btn-add" aria-hidden="true"></i>
 		</div>
 		<form class="genre__form genre-insert" action="assets/crud/insertGenre.php" method="post">
+			<input type="hidden" name="user_id" value="<?= $user_id ?>" />
 			<input class="genre__txt" type="text" name="genre" placeholder="genre"/><br/>
 			<input class="genre__submit btn-positive hover-effect" type="submit" name="insertGenre" value="追加"/>
 			<input class="genre__cancel btn-negative hover-effect" type='button' name='cancel' class='cancel-btn' value='キャンセル'/>
@@ -136,6 +158,7 @@ $data_genre = $db->query($qry_genre);
 		<i class="fa fa-plus fa-2x btn-add" aria-hidden="true"></i>
 	</div>
 	<form class="todo-insert" action="assets/crud/insert.php" method="post">
+		<input type="hidden" name="user_id" value="<?= $user_id ?>" />
 		<input type="text" name="scene" placeholder="scene" /><br/>
 		<input type="text" name="action" placeholder="action"/><br/>
 		<input type="hidden" name="genre_id"/>
@@ -160,10 +183,18 @@ $data_genre = $db->query($qry_genre);
 <?php 
 include("assets/html/footer.html");
  ?>
+<script src="http://code.jquery.com/jquery-2.2.0.min.js"></script>
 <script src="js/module/textEdit.js"></script>
 <script src="js/module/textEditGenre.js"></script>
 <script src="js/module/changeGenre.js"></script>
 <script src="js/app.js"></script>
+<script>
+$('.btn-logout').on('click', function(){
+  $('#logout').submit();
+});
+
+  
+</script>
 </body>
 </html>
 

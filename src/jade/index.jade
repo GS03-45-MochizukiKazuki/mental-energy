@@ -12,6 +12,7 @@ append StylesheetBlock
 append JavascriptBlock
 	script(src="js/lib/slick.min.js")
 	script(src="js/module/fadeInDown.js")
+	script(src="js/module/fireworks.js")
 	script(src="js/index.js")
 	script.
 		(function(w, d, s, path) {
@@ -35,7 +36,8 @@ block ContentBlock
 			li.photo2
 			li.photo3
 		.mesh
-		.mesh-dark
+		//- .mesh-dark
+		canvas#fireworks
 		.content-block
 			.txt
 				h2.title メンタルエナジー専用TODOリスト
@@ -101,14 +103,14 @@ block ContentBlock
 			.box-container
 				.box.box1.js-scrollTarget
 					.icon.
-						<i class="fa fa-check-circle-o" aria-hidden="true"></i>
+						<i class="fa fa-list-ul" aria-hidden="true"></i>
 					.title TODOアプリ
 					.txt 基本操作はTODOアプリと同じ。時間をかけずに利用方法を理解できます。
 				.box.box2.js-scrollTarget
 					.icon.
-						<i class="fa fa-repeat" aria-hidden="true"></i>
-					.title 習慣化
-					.txt 習慣化するためにマイルール登録から最低1週間はチェックボタンを押せない仕様になっています。
+						<i class="fa fa-check-circle-o" aria-hidden="true"></i>
+					.title チェックボックス
+					.txt 習慣化するためにマイルール登録から最低1週間はチェックボックスを押せない仕様になっています。
 				.box.box3.js-scrollTarget
 					.icon.
 						<i class="fa fa-clock-o" aria-hidden="true"></i>
@@ -125,6 +127,10 @@ block ContentBlock
 					.title プッシュ通知
 					.txt メンタルエナジーの見直しを通知することで、定期的にやる気を喚起します。
 				.box.box6.js-scrollTarget
+					.icon.
+						<i class="fa fa-map-marker" aria-hidden="true"></i>
+					.title 位置情報
+					.txt 特定の場所に近づいたとき、マイルールをサジェストする機能です。
 				.box.box7.js-scrollTarget
 				.box.box8.js-scrollTarget
 				.box.box9.js-scrollTarget

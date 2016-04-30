@@ -45,6 +45,31 @@ $('input[name="archive_id"]').change(function(){
 });
 
 
+/* ======================================
+ * ログアウト
+ * ====================================== */
+
+
+ var flag_setting = true;
+ var $setting = $('.setting');
+
+$('.btn-setting').on('click', function(){
+	if (flag_setting) {
+		$setting.fadeIn();
+		flag_setting = false;
+	} else {
+		$setting.fadeOut();
+		flag_setting = true;
+	}
+	
+});
+
+$('.btn-logout').on('click', function(){
+	$('#logout').submit();
+});
+
+
+
 
 
 })();

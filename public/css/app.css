@@ -41,7 +41,16 @@ input[name="archive"] {
  * ====================================== */
   /* ======================================
  * テーブル編集、ハイライト
+ * ====================================== */
+  /* ======================================
+ * 吹き出し
  * ====================================== */ }
+  .env-pc .user-name {
+    position: absolute;
+    top: 15px;
+    left: 80px;
+    color: #fff;
+    font-weight: bold; }
   .env-pc h2 {
     font-size: 15px;
     display: inline-block; }
@@ -189,6 +198,38 @@ input[name="archive"] {
     width: 30px; }
   .env-pc .js-highlight td, .env-pc td.js-highlight {
     background: #f8f8f8; }
+  .env-pc .setting {
+    display: none;
+    position: absolute;
+    top: 55px;
+    right: 17px;
+    z-index: 999; }
+  .env-pc .btn-logout {
+    padding: 15px 10px;
+    cursor: pointer; }
+  .env-pc .arrow_box {
+    position: relative;
+    background: #fff;
+    border: 1px solid #EA5504; }
+  .env-pc .arrow_box:after, .env-pc .arrow_box:before {
+    bottom: 100%;
+    left: 50%;
+    border: solid transparent;
+    content: " ";
+    height: 0;
+    width: 0;
+    position: absolute;
+    pointer-events: none; }
+  .env-pc .arrow_box:after {
+    border-color: rgba(255, 255, 255, 0);
+    border-bottom-color: #fff;
+    border-width: 10px;
+    margin-left: -10px; }
+  .env-pc .arrow_box:before {
+    border-color: rgba(245, 10, 65, 0);
+    border-bottom-color: #EA5504;
+    border-width: 12px;
+    margin-left: -12px; }
 
 html, body {
   width: 100%;

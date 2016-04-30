@@ -7,13 +7,15 @@ include('../func.php');
 if(
   !isset($_POST["genre_id"]) || $_POST["genre_id"]=="" ||
   !isset($_POST["scene"]) || $_POST["scene"]=="" ||
-  !isset($_POST["action"]) || $_POST["action"]==""
+  !isset($_POST["action"]) || $_POST["action"]=="" ||
+  !isset($_POST["user_id"]) || $_POST["user_id"]==""
 ){
   exit('ParamError');
 }
 
 //POSTデータ取得
 $genre_id   = $_POST["genre_id"];
+$user_id  = $_POST["user_id"];
 $scene   = $_POST["scene"];
 $action  = $_POST["action"];
 
@@ -24,11 +26,12 @@ $action  = $_POST["action"];
 $pdo = db();
 
 //2．データ登録SQL作成
-$stmt = $pdo->prepare("INSERT INTO an(genre_id, scene, action,
-indate )VALUES(:a1, :a2, :a3, sysdate())");
+$stmt = $pdo->prepare("INSERT INTO an(genre_id, user_id, scene, action,
+indate )VALUES(:a1, :a2, :a3, :a4, sysdate())");
 $stmt->bindValue(':a1', $genre_id);
-$stmt->bindValue(':a2', $scene);
-$stmt->bindValue(':a3', $action);
+$stmt->bindValue(':a2', $user_id);
+$stmt->bindValue(':a3', $scene);
+$stmt->bindValue(':a4', $action);
 // $stmt->bindValue(':a4', $evaluation);
 $status = $stmt->execute();
 

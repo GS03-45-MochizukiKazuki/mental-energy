@@ -1,0 +1,75 @@
+// config
+@import 'variable', 'function', 'mixin', 'keyframes';
+
+header ul .item{
+	display: none !important;
+}
+
+
+
+.user-name{
+  display: none;
+}
+
+
+#container {
+  width: 320px;
+  margin: 100px auto 0;
+  font-size: 16px;
+  font-family: Verdana, sans-serif;
+}
+
+form {
+  text-align: center;
+}
+
+form#logout {
+  text-align: right;
+  font-size: 12px;
+  margin-bottom: 15px;
+}
+
+input[type=text],
+input[type=password] {
+  width: 250px;
+  padding: 5px;
+  border-radius: 4px;
+  font-size: 14px;
+  margin-bottom: 5px;
+}
+
+.btn {
+  width: 150px;
+  padding: 7px;
+  border-radius: 5px;
+  color: #fff;
+  background: $color_main;
+  box-shadow: 0 3px 0 $color_sub;
+  cursor: pointer;
+  margin: 20px auto 15px;
+}
+
+.btn:hover {
+  opacity: 0.8;
+}
+
+.fs12 {
+  font-size: 12px;
+  font-weight: normal;
+}
+
+.err {
+  color: $color_main;
+  font-weight: bold;
+  font-size: 13px;
+}
+
+// h1 {
+//   font-size: 16px;
+//   border-bottom: 1px solid #ccc;
+//   padding-bottom: 5px;
+// }
+
+ul > li {
+  padding: 3px 0;
+}

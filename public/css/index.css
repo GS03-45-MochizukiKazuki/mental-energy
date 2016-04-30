@@ -413,6 +413,9 @@ body {
  * ====================================== */
   /* ======================================
  * 登録ボタン
+ * ====================================== */
+  /* ======================================
+ * canvas
  * ====================================== */ }
   .env-pc .sec-main {
     position: relative;
@@ -618,6 +621,13 @@ body {
       background-color: #EA5504; }
     .env-pc .btn-register a {
       text-decoration: none; }
+  .env-pc #fireworks {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 500px;
+    opacity: .4;
+    -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=40)"; }
 
 .env-sp {
   /* ======================================
@@ -625,6 +635,9 @@ body {
  * ====================================== */
   /* ======================================
  * 登録ボタン
+ * ====================================== */
+  /* ======================================
+ * canvas
  * ====================================== */ }
   .env-sp .sec-main {
     position: relative;
@@ -834,3 +847,11 @@ body {
       background-color: #EA5504; }
     .env-sp .btn-register a {
       text-decoration: none; }
+  .env-sp #fireworks {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 450px;
+    opacity: .4;
+    -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=40)"; }

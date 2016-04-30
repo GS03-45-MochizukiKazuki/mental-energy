@@ -275,6 +275,20 @@ $width-container: 750px;
 	}
 }
 
+/* ======================================
+ * canvas
+ * ====================================== */
+
+#fireworks{
+	position: absolute;
+	top: 0;
+	left: 0;
+	// min-width: $width-pc;
+	// width: 100%;
+	height: 500px;
+	opacity: .4;
+}
+
 
 
 }

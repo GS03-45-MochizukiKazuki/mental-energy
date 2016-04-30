@@ -13,4 +13,20 @@ function dbExecError($status,$stmt){
   }
 }
 
+//認証OK時の初期値セット
+function loginSessionSet($val){
+  $_SESSION["chk_ssid"]  = session_id();
+  $_SESSION["kanri_flg"] = $val['kanri_flg'];
+  $_SESSION["name"]      = $val['name'];
+}
 
+//セッションチェック用関数
+function sessionCheck(){
+  if( !isset($_SESSION["chk_ssid"]) || ($_SESSION["chk_ssid"] != session_id()) ){
+    echo "LOGIN ERROR";
+    exit();
+  }else{
+     session_regenerate_id(true);
+     $_SESSION["chk_ssid"] = session_id();
+  }
+}
