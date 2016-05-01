@@ -17,6 +17,17 @@ html, body{
 	
 }
 
+.env-pc{
+	.pc{
+		display: inline-block;
+	}
+}
+.env-sp{
+	.pc{
+		display: none;
+	}
+}
+
 body{
 	color: $color_font;
 	background-color: $color_todo_bg;
@@ -79,6 +90,10 @@ a{
 			background-image: url(../img/common/logo_reverse.png);
 			margin-left: $margin-pc;
 			margin-top: 10px;
+		}
+		.fa-smile-o{
+			font-size: 20px;
+			margin-left: 10px;
 		}
 		ul{
 			float: right;

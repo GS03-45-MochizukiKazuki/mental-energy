@@ -12,22 +12,26 @@ $app->run();
 <html lang="ja">
 
 <head>
-
-<link href='https://fonts.googleapis.com/css?family=EB+Garamond|Playfair+Display+SC|Radley' rel='stylesheet' type='text/css'>
-<link rel="stylesheet" href="css/data.css">
+<?php 
+include("assets/html/meta.html");
+ ?>
+<link rel="stylesheet" href="css/app.css">
+<link rel="stylesheet" href="css/archive.css">
+<link rel="stylesheet" href="css/graph.css">
 </head>
 
-<body onload="init();">
-
-<canvas id="particleEmitterCanvas" width="800" height="600"></canvas>
-<main class="blur">
-	<div class="txt">Your Mental Energy is ...</div>
-	<div id="percent"></div>
-</main>
-
+<body>
+<div class="wrapper">
 <?php 
 $user_email = h($app->me()->email);
 $user_id = h($app->me()->id);
+$token_header = h($_SESSION['token']);
+include("assets/html/header.php");
+ ?>
+<!-- body -->
+
+
+<?php 
 
 include("assets/pass.php");
 include("assets/func.php");
@@ -37,6 +41,7 @@ $db->query("set names utf8"); // 文字化け対策
 
 // メインテーブル
 $qry = "SELECT an.id, an.scene, an.action, an.archive_flag, genre.id AS genre_id, genre.name, users.id AS user_id, users.email FROM (an INNER JOIN genre ON an.genre_id = genre.id) INNER JOIN users ON an.user_id = users.id AND an.user_id = {$user_id} ORDER BY an.genre_id;";
+// $qry = "SELECT an.id, an.scene, an.action, an.archive_flag, genre.id AS genre_id, genre.name FROM an INNER JOIN genre ON an.genre_id = genre.id ORDER BY an.genre_id;";
 $data = $db->query($qry);
 
 ?>
@@ -61,18 +66,27 @@ while ($value = $data->fetch()) {
 $db = null;
 ?>
 </table>
+
+
+<div class="chart-block">
+	<div id="piechart" class="piechart"></div>
+	<div id="piechart2" class="piechart"></div>
+</div>
+
+
 </div><!-- .wrapper -->
-
-
-<script src="http://code.jquery.com/jquery-2.2.0.min.js"></script>
-<script src="js/lib/createjs.min.js"></script>
-<script src="js/lib/ColorFilter.js"></script>
-<script src="js/lib/particleEmitterJs-0.5.0-custom.js"></script>
-<script src="js/module/dataDefault.js"></script>
-<script src="js/data.js"></script>
+<!-- body -->
+<?php 
+include("assets/html/footer.html");
+ ?>
+<script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
+<script src="js/module/chart.js"></script>
+<script src="js/app.js"></script>
+<script src="js/archive.js"></script>
 
 </body>
 </html>
+
 
 
 

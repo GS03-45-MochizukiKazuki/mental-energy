@@ -1,0 +1,47 @@
+
+
+body{
+	overflow: visible !important;
+	background-color: #fff;
+}
+.wrapper{
+	overflow: hidden;
+}
+
+.hidden{
+	display: none;
+}
+footer{
+	position: relative !important;
+}
+
+
+
+.chart-block{
+	width: 800px;
+	margin: 0 auto;
+}
+
+.piechart{
+	margin: 0 auto;
+	margin-top: -50px;
+	padding-left: 100px;
+	display: inline-block;
+	// width: 500px;
+	// height: 400px;
+	width: 800px;
+	height: 600px;
+	position: relative;
+}
+.piechart:first-child{
+	margin-top: 0px;
+}
+// .piechart:nth-child(odd){
+// 	padding-left: 70px;
+// 	z-index: 999;
+
+// }
+// .piechart:nth-child(even){
+// 	margin-left: -300px;
+// 	padding-left: 200px;
+// }
