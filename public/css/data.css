@@ -15,6 +15,13 @@ body {
   top: 0;
   left: 0; }
 
+#particleEmitterCanvas2 {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0; }
+
 main {
   position: absolute;
   top: 50%;
@@ -22,23 +29,36 @@ main {
   -webkit-transform: translate(-50%, -50%);
           transform: translate(-50%, -50%);
   color: #fff;
+  min-width: 600px;
+  width: 100%;
   font-size: 40px;
   text-align: center;
+  text-shadow: 0 0 10px #fff;
   font-family: 'EB Garamond', serif;
-  font-family: 'Radley', serif; }
+  font-family: 'Radley', serif;
+  letter-spacing: 3px; }
   main .txt {
     font-size: 40px; }
   main #percent {
-    font-size: 30px; }
-  main .score {
-    font-size: 80px; }
+    font-size: 30px;
+    opacity: 0;
+    -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=0)";
+    text-shadow: 0 0 10px #fff; }
+    main #percent .score {
+      font-size: 90px; }
 
+/* ======================================
+ * ブラーアニメーション
+ * ====================================== */
 .blur {
   color: #fff;
+  opacity: 1 !important;
+  -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=100)";
   -webkit-animation-name: blurAnim;
           animation-name: blurAnim;
   -webkit-animation-duration: 3s;
-          animation-duration: 3s; }
+          animation-duration: 3s;
+  letter-spacing: 3px; }
 
 @-webkit-keyframes blurAnim {
   0% {
@@ -46,16 +66,18 @@ main {
     color: transparent;
     opacity: 0;
     -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=0)"; }
-  30% {
+  10% {
     text-shadow: 0 0 120px #fff;
     color: transparent;
     opacity: 0;
-    -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=0)"; }
+    -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=0)";
+    letter-spacing: -10px; }
   100% {
-    text-shadow: 0 0 0px #fff;
+    text-shadow: 0 0 10px #fff;
     color: transparent;
     opacity: 1;
-    -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=100)"; } }
+    -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=100)";
+    letter-spacing: 3px; } }
 
 @keyframes blurAnim {
   0% {
@@ -63,17 +85,87 @@ main {
     color: transparent;
     opacity: 0;
     -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=0)"; }
-  30% {
+  10% {
     text-shadow: 0 0 120px #fff;
     color: transparent;
     opacity: 0;
-    -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=0)"; }
+    -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=0)";
+    letter-spacing: -10px; }
   100% {
-    text-shadow: 0 0 0px #fff;
+    text-shadow: 0 0 10px #fff;
     color: transparent;
+    opacity: 1;
+    -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=100)";
+    letter-spacing: 3px; } }
+
+.blurInfi {
+  -webkit-animation-name: blurInfi;
+          animation-name: blurInfi;
+  -webkit-animation-duration: 8s;
+          animation-duration: 8s;
+  -webkit-animation-iteration-count: infinite;
+          animation-iteration-count: infinite; }
+
+@-webkit-keyframes blurInfi {
+  0% {
+    opacity: 1;
+    -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=100)"; }
+  50% {
+    opacity: 1;
+    -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=100)"; }
+  75% {
+    opacity: 1;
+    -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=100)"; }
+  80% {
+    opacity: 0.9;
+    -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=90)"; }
+  83% {
+    opacity: 0.2;
+    -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=20)"; }
+  84% {
+    opacity: 0.9;
+    -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=90)"; }
+  85% {
+    opacity: 0.4;
+    -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=40)"; }
+  86% {
+    opacity: 0.7;
+    -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=70)"; }
+  87% {
+    opacity: 1;
+    -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=100)"; }
+  100% {
     opacity: 1;
     -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=100)"; } }
 
-/* ======================================
- * ブラーアニメーション
- * ====================================== */
+@keyframes blurInfi {
+  0% {
+    opacity: 1;
+    -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=100)"; }
+  50% {
+    opacity: 1;
+    -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=100)"; }
+  75% {
+    opacity: 1;
+    -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=100)"; }
+  80% {
+    opacity: 0.9;
+    -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=90)"; }
+  83% {
+    opacity: 0.2;
+    -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=20)"; }
+  84% {
+    opacity: 0.9;
+    -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=90)"; }
+  85% {
+    opacity: 0.4;
+    -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=40)"; }
+  86% {
+    opacity: 0.7;
+    -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=70)"; }
+  87% {
+    opacity: 1;
+    -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=100)"; }
+  100% {
+    opacity: 1;
+    -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=100)"; } }

@@ -20,9 +20,10 @@ $app->run();
 <body onload="init();">
 
 <canvas id="particleEmitterCanvas" width="800" height="600"></canvas>
-<main class="blur">
-	<div class="txt">Your Mental Energy is ...</div>
-	<div id="percent"></div>
+<canvas id="particleEmitterCanvas2" width="800" height="600"></canvas>
+<main class="">
+	<div class="txt animate_txt">Your Mental Energy is ...</div>
+	<div id="percent" class=""></div>
 </main>
 
 <?php 
@@ -63,12 +64,27 @@ $db = null;
 </table>
 </div><!-- .wrapper -->
 
+<audio id="bgm_am_high">
+	<source src="sound/bgm_am_high.mp3" type="audio/mp3"></source>
+</audio>
+<audio id="bgm_pm_high">
+	<source src="sound/bgm_pm_high.mp3" type="audio/mp3"></source>
+</audio>
+<audio id="bgm_am_low">
+	<source src="sound/bgm_am_low.mp3" type="audio/mp3"></source>
+</audio>
+<audio id="bgm_pm_low">
+	<source src="sound/bgm_pm_low.mp3" type="audio/mp3"></source>
+</audio>
+
+
 
 <script src="http://code.jquery.com/jquery-2.2.0.min.js"></script>
 <script src="js/lib/createjs.min.js"></script>
 <script src="js/lib/ColorFilter.js"></script>
 <script src="js/lib/particleEmitterJs-0.5.0-custom.js"></script>
-<script src="js/module/dataDefault.js"></script>
+<!-- <script src="js/module/dataDefault.js"></script> -->
+<script src="js/module/textAnim.js"></script>
 <script src="js/data.js"></script>
 
 </body>

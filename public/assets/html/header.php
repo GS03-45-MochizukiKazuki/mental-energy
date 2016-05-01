@@ -10,7 +10,7 @@
       <ul class="menu-list">
         <li class="item"><a href="archive.php">アーカイブを見る</a></li>
         <li class="item"><a href="gallery.php">一覧を見る</a></li>
-        <li class="item"><a href="graph.php">メンタルエナジーを見る</a></li>
+        <li class="item"><a href="graph.php">グラフを見る</a></li>
         <li class="item pc"><a href="data.php"><i class="fa fa-smile-o" aria-hidden="true"></i></a></li>
         <li class="item btn-setting"><i class="fa fa-cog fa-2x fa-fw"></i></li>
       </ul>

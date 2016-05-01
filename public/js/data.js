@@ -1,3 +1,4 @@
+
 var canvas;         // the canvas element
 var context;        // the 2d context of the canvas
 var stage;          // the createjs stage
@@ -71,7 +72,7 @@ function addParticleEmitter(x, y) {
     emitter.accelerationY = 0;
     emitter.radialAcceleration = 1;
     emitter.radialAccelerationVar = 0;
-    emitter.tangentalAcceleration = 60;
+    emitter.tangentalAcceleration = 50;
     emitter.tangentalAccelerationVar = 10;
     emitter.angle = 180;
     emitter.angleVar = 180;
@@ -110,3 +111,74 @@ function handleResize() {
 function handleMove(event){
     emitter.position = new createjs.Point(event.stageX, event.stageY);
 }
+
+var degree = 0;   // 角度
+var radius = 300; // 半径
+
+function autoMove(){
+    degree += 1;
+    // 角度をラジアンに変換
+    var rad = degree * Math.PI / 180;
+
+    // 中心点
+    var cx = canvas.width / 2;
+    var cy = canvas.height / 2;
+    
+    var x = radius * 1.5 * Math.cos(rad);
+    var y = radius * Math.sin(rad);
+
+    emitter.position = new createjs.Point(cx+x, cy+y);
+}
+setInterval(function(){
+    autoMove();
+}, 15);
+
+
+// blur
+
+// var $main = $('main');
+
+// setTimeout(function(){
+//     $main.removeClass('blur');
+//     $main.addClass('blurInfi');
+// }, 5000);
+
+
+
+/* ======================================
+ * BGM
+ * ====================================== */
+var h = (new Date).getHours();
+
+var bgm_am_high = document.getElementById("bgm_am_high");
+var bgm_pm_high = document.getElementById("bgm_pm_high");
+var bgm_am_low = document.getElementById("bgm_am_low");
+var bgm_pm_low = document.getElementById("bgm_pm_low");
+
+if (h > 5 && h < 18) {
+    if (user_score > 60) {
+        bgm_am_high.play();
+        bgm_am_high.volume = 0.4;
+        bgm_am_high.loop = true;
+    } else {
+        bgm_am_low.play();
+        bgm_am_low.volume = 0.5;
+        bgm_am_low.loop = true;
+    }
+} else {
+    if (user_score > 60) {
+        bgm_pm_high.play();
+        bgm_pm_high.volume = 0.4;
+        bgm_pm_high.loop = true;
+    } else {
+        bgm_pm_low.play();
+        bgm_pm_low.volume = 0.7;
+        bgm_pm_low.loop = true;
+    }
+}
+
+
+    
+
+
+
