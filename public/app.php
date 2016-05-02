@@ -54,6 +54,18 @@ $data = $db->query($qry);
 $qry_genre = "SELECT * FROM genre WHERE genre.user_id = {$user_id}";
 // $qry_genre = "SELECT * FROM genre";
 $data_genre = $db->query($qry_genre);
+
+// id
+$qry_id = "SELECT * FROM an WHERE archive_flag = 0 AND an.user_id = {$user_id} AND (indate > (NOW() - INTERVAL 7 DAY))";
+$data_id = $db->query($qry_id);
+?>
+
+<?php 
+while($value_id = $data_id->fetch()){
+	$id = $value_id["id"];
+	print "<span data-radio-id={$id} class=\"radio-check\"></span>";
+}
+$db = null;
 ?>
 
 <section class="sec-todo section-block cf">
@@ -139,7 +151,7 @@ $data_genre = $db->query($qry_genre);
 
 				// 削除ボタンのvalueに行と同じID番号を振る
 				print "<tr class=\"editable-tr\" data-genre-id='{$genre_id}'>
-							<td><input type=\"radio\" name=\"archive_id\" value=\"{$id}\"/></td>
+							<td><input type=\"radio\" data-radio-id={$id} name=\"archive_id\" value=\"{$id}\" /></td>
 					        <td class=\"editable-td editable-td1\">{$scene}</td><td class=\"editable-td editable-td2\">{$action}</td>
 				    	</tr>\n";
 			}

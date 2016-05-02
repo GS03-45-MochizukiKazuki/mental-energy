@@ -115,6 +115,33 @@ $btn_genre.on('click', function(){
 	}
 });
 
+/* ======================================
+ * ラジオボタン
+ * ====================================== */
+
+var $inactiveAry = [];
+
+$('.radio-check').each(function(){
+	var $inactiveId = $(this).data('radio-id');
+	$inactiveAry.push($inactiveId);
+});
+
+console.log($inactiveAry);
+
+
+$('input[type="radio"]').each(function(){
+	for (var i = 0; i < $inactiveAry.length; i++) {
+		if ( $(this).data('radio-id') == $inactiveAry[i] ) {
+			$(this).addClass('is-inactive');
+			$(this).attr('disabled', 'true');
+		}		
+	}
+});
+
+
+
+
+
 
 
 

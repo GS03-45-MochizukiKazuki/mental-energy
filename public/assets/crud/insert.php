@@ -27,12 +27,11 @@ $pdo = db();
 
 //2．データ登録SQL作成
 $stmt = $pdo->prepare("INSERT INTO an(genre_id, user_id, scene, action,
-indate )VALUES(:a1, :a2, :a3, :a4, sysdate())");
+indate )VALUES(:a1, :a2, :a3, :a4, now())");
 $stmt->bindValue(':a1', $genre_id);
 $stmt->bindValue(':a2', $user_id);
 $stmt->bindValue(':a3', $scene);
 $stmt->bindValue(':a4', $action);
-// $stmt->bindValue(':a4', $evaluation);
 $status = $stmt->execute();
 
 //3．SQL実行エラーチェック

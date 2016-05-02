@@ -98,10 +98,12 @@ $width-container: 750px;
 	}
 	.box{
 		margin: 0 auto;
+		width: 800px;
+		margin-left: - (800px - $width-container) / 2;
 	}
 	.box1{
-		margin-top: 50px;
-		margin-bottom: 80px;
+		margin-top: 80px;
+		margin-bottom: 60px;
 	}
 	.box1{
 		margin-bottom: 100px;
@@ -123,16 +125,18 @@ $width-container: 750px;
 		// margin-right: $margin-pc;
 	}
 	.pc{
-		@include setImg(800/2.5, 629/2.5);
+		@include setImg(800/2, 629/2);
 		vertical-align: middle;
 	}
 	.pc1{
 		background-image: url(../img/top/about-pc.png);
 		float: right;
+		margin-top: -20px;
 	}
 	.pc2{
 		background-image: url(../img/top/about-pc.png);
 		float: left;
+		margin-top: -10px;
 	}
 }
 

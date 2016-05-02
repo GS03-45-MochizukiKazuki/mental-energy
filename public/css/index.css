@@ -489,10 +489,12 @@ body {
     .env-pc .sec-about .content-block {
       width: 750px; }
     .env-pc .sec-about .box {
-      margin: 0 auto; }
+      margin: 0 auto;
+      width: 800px;
+      margin-left: -25px; }
     .env-pc .sec-about .box1 {
-      margin-top: 50px;
-      margin-bottom: 80px; }
+      margin-top: 80px;
+      margin-bottom: 60px; }
     .env-pc .sec-about .box1 {
       margin-bottom: 100px; }
     .env-pc .sec-about .title, .env-pc .sec-about .sec-main .catchcopy, .env-pc .sec-main .sec-about .catchcopy, .env-sp .sec-main .env-pc .sec-about .catchcopy {
@@ -505,16 +507,18 @@ body {
     .env-pc .sec-about .pc {
       background-repeat: no-repeat;
       background-position: center center;
-      background-size: 320px, 251.6px;
-      width: 320px;
-      height: 251.6px;
+      background-size: 400px, 314.5px;
+      width: 400px;
+      height: 314.5px;
       vertical-align: middle; }
     .env-pc .sec-about .pc1 {
       background-image: url(../img/top/about-pc.png);
-      float: right; }
+      float: right;
+      margin-top: -20px; }
     .env-pc .sec-about .pc2 {
       background-image: url(../img/top/about-pc.png);
-      float: left; }
+      float: left;
+      margin-top: -10px; }
   .env-pc .sec-movie {
     text-align: center;
     margin-bottom: 100px; }

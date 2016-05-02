@@ -38,6 +38,31 @@ a{
 	height: 100%;
 }
 
+// radio button
+.is-inactive{
+	opacity: .4;
+}
+.is-inactive:before{
+	content: '';
+	position: absolute;
+	width: 15px;
+	height: 2px;
+	transform: rotate(45deg);
+	background-color: $color_font;
+	margin-top: 5px;
+	margin-left: -2px;
+}
+.is-inactive:after{
+	content: '';
+	position: absolute;
+	width: 15px;
+	height: 2px;
+	transform: rotate(-45deg);
+	background-color: $color_font;
+	margin-top: 5px;
+	margin-left: -2px;
+}
+
 
 .env-pc{
 	min-width: 800px;

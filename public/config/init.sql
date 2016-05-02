@@ -14,7 +14,7 @@ create table an (
 	scene varchar(255),
 	action varchar(255),
 	archive_flag int(1) not null,
-	indate int(255)
+	indate datetime(6)
 )
 
 create table genre (
@@ -42,3 +42,7 @@ SELECT an.id, an.scene, an.action, an.archive_flag, genre.id AS genre_id, genre.
 
 
 SELECT an.id, an.scene, an.action, an.archive_flag, genre.id AS genre_id, genre.name, users.id AS user_id, users.email FROM (an INNER JOIN genre ON an.genre_id = genre.id) INNER JOIN users ON an.user_id = users.id ORDER BY an.id;
+
+
+-- 7日以内のデータを取得
+SELECT * FROM an WHERE an.user_id = {$user_id} AND (indate > (NOW() - INTERVAL 7 DAY))
