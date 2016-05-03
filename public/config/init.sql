@@ -31,6 +31,13 @@ create table users (
 	modified datetime
 )
 
+
+INSERT INTO an (genre_id, user_id, scene, action, archive_flag, indate) VALUES (5, 1, '24:00', '就寝', 0, now());
+INSERT INTO an (genre_id, user_id, scene, action, archive_flag, indate) VALUES (5, 1, '6:00', '起床', 0, now());
+INSERT INTO an (genre_id, user_id, scene, action, archive_flag, indate) VALUES (5, 1, '12:00', '昼寝', 0, now());
+
+
+
 desc users;
 
 

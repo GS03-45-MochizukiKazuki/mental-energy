@@ -329,8 +329,10 @@ input[name="archive"] {
     color: #fff;
     font-weight: bold;
     max-width: 170px;
-    overflow: scroll;
-    font-size: 12px; }
+    font-size: 12px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap; }
   .env-sp h2 {
     font-size: 15px;
     display: inline-block; }

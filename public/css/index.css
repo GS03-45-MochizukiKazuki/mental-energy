@@ -493,15 +493,17 @@ body {
       width: 800px;
       margin-left: -25px; }
     .env-pc .sec-about .box1 {
-      margin-top: 80px;
-      margin-bottom: 60px; }
+      margin-top: 100px;
+      margin-bottom: 70px; }
     .env-pc .sec-about .box1 {
       margin-bottom: 100px; }
     .env-pc .sec-about .title, .env-pc .sec-about .sec-main .catchcopy, .env-pc .sec-main .sec-about .catchcopy, .env-sp .sec-main .env-pc .sec-about .catchcopy {
       font-size: 18px;
       font-weight: bold; }
     .env-pc .sec-about .txt1 {
-      float: left; }
+      float: left;
+      position: relative;
+      left: 50px; }
     .env-pc .sec-about .txt2 {
       float: right; }
     .env-pc .sec-about .pc {
@@ -512,9 +514,16 @@ body {
       height: 314.5px;
       vertical-align: middle; }
     .env-pc .sec-about .pc1 {
-      background-image: url(../img/top/about-pc.png);
+      background-repeat: no-repeat;
+      background-position: center center;
+      background-size: 200px, 401px;
+      width: 200px;
+      height: 401px;
+      background-image: url(../img/top/about-iphone.png);
       float: right;
-      margin-top: -20px; }
+      margin-top: -30px;
+      position: relative;
+      right: 120px; }
     .env-pc .sec-about .pc2 {
       background-image: url(../img/top/about-pc.png);
       float: left;
