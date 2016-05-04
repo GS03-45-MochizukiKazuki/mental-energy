@@ -1,0 +1,79 @@
+.env-sp{
+
+	.menu-trigger{
+		display: none;
+	}
+	.btn-sp-menu{
+		right: 0;
+	}
+
+	.sec-archive{
+		width: 300px;
+		margin: 30px auto 0;
+		.fa{
+			cursor: pointer;
+		}
+		.headline{
+			display: inline-block;
+			font-size: 12px;
+			font-weight: bold;
+			padding-bottom: 10px;
+			text-align: center !important;
+		}
+		.headline:first-child{
+			margin-left: 20px;
+		}
+		.table-todo{
+			display: block;
+			position: relative;
+			overflow: scroll;
+			padding: 0;
+			// padding: 0 20px;
+		}
+		table{
+			margin: 0 auto;
+		}
+		tr{
+			width: 100%;
+		}
+		th,td{
+			min-width: 20px;
+		}
+		td{
+			padding: 8px 0 5px;
+		}
+		.row-top{
+			border-bottom: 1px solid #888;
+			width: 100%;
+			margin: 0 auto;
+			font-size: 0;
+		}
+		.row-todo{
+			border-bottom: 1px dotted #ccc;
+			padding-bottom: 10px;
+		}
+		.column-s{
+			width: 15px;
+			text-align: left;
+		}
+		.column-m{
+			width: 50px;
+			text-align: left;
+		}
+		.column-l{
+			width: 100px;
+			text-align: left;
+		}
+		.btn-undo{
+			text-align: center;
+		}
+		.btn-delete{
+			text-align: center;
+			padding-right: 10px;
+		}
+
+		
+	}
+
+
+}

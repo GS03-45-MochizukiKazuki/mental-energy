@@ -781,8 +781,9 @@ body {
             flex-wrap: wrap; }
   .env-sp .sec-manual .box {
     width: 200px;
-    height: 200px;
+    height: auto;
     margin-bottom: 10px;
+    padding-bottom: 30px;
     text-align: center;
     color: #333;
     margin: 0 auto; }

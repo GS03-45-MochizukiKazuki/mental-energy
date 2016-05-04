@@ -24,7 +24,7 @@ function disp(text){
 // listの高さ
 $(window).on('load resize', function(){
 	var $windowHeight = $(window).innerHeight();
-	$('.table-todo').css('height', $windowHeight * .7);
+	$('.table-todo').css('height', $windowHeight * .8);
 
 });
 

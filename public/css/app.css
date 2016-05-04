@@ -428,7 +428,7 @@ input[type="text"] {
   .env-sp .todo__cancel-btn {
     display: inline-block; }
   .env-sp .todo__table {
-    margin-top: 20px;
+    margin-top: 0px;
     margin-bottom: 30px;
     table-layout: fixed;
     border-collapse: collapse;

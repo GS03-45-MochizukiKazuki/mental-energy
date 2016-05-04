@@ -50,7 +50,7 @@ function switch3(){
 // listの高さ
 $(window).on('load resize', function(){
 	var $windowHeight = $(window).innerHeight();
-	$('.table-todo').css('height', $windowHeight * .6);
+	$('.table-todo').css('height', $windowHeight * .7);
 
 });
 

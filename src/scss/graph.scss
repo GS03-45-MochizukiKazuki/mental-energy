@@ -16,6 +16,7 @@ footer{
 }
 
 
+.env-pc{
 
 .chart-block{
 	width: 800px;
@@ -45,3 +46,32 @@ footer{
 // 	margin-left: -300px;
 // 	padding-left: 200px;
 // }
+
+}
+
+
+
+.env-sp{
+
+.chart-block{
+	width: 320px;
+	margin: 0 auto;
+}
+
+.piechart{
+	margin: 0 auto;
+	margin-top: -50px;
+	padding-left: 50px;
+	transform: translateX(-70px);
+	display: inline-block;
+	// width: 500px;
+	// height: 400px;
+	width: 320/600*800px;
+	height: 320/600*600px;
+	position: relative;
+}
+.piechart:first-child{
+	margin-top: 0px;
+}
+
+}

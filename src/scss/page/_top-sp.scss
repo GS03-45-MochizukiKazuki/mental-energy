@@ -163,8 +163,9 @@ $width-container: 300px;
 	}
 	.box{
 		width: 200px;
-		height: 200px;
+		height: auto;
 		margin-bottom: 10px;
+    	padding-bottom: 30px;
 		// background-color: $color_main;
 		text-align: center;
 		color: $color_font;

@@ -18,6 +18,10 @@
 
 .env-pc{
 
+	tbody{
+		margin-bottom: 50px;
+	}
+
 	.swith{
 		width: 182px;
 		height: 30px;
@@ -60,9 +64,61 @@
 	.headline:first-child{
 		margin-left: 0 !important;
 	}
+	
+}
 
 
 
+
+.env-sp{
+
+	tbody{
+		margin-bottom: 30px;
+		padding: 0 10px !important;
+	}
+
+	.swith{
+		width: 182px;
+		height: 30px;
+		border: 1px solid #888;
+		font-size: 0;
+		margin-bottom: 30px;
+		border-radius: 6px;
+	}
+	.btn{
+		display: inline-block;
+		width: 60px;
+		height: 100%;
+		text-align: center;
+		line-height: 30px;
+		height: 100%;
+		font-size: 12px;
+		cursor: pointer;
+	}
+	.btn-all{
+		background-color: #fff;
+		border-right: 1px solid #888;
+		border-top-left-radius: 5px;
+		border-bottom-left-radius: 5px;
+	}
+	.btn-on{
+		background-color: $color_undone;
+		border-right: 1px solid #888;
+	}
+	.btn-off{
+		background-color: $color_done;
+		border-top-right-radius: 5px;
+		border-bottom-right-radius: 5px;
+	}
+
+
+	.icon-check{
+		text-align: center !important;
+		cursor: default;
+	}
+	.headline:first-child{
+		margin-left: 0 !important;
+	}
 	
 }
 
