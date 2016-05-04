@@ -186,6 +186,13 @@ $width-container: 750px;
 		}
 	}
 
+	.icon-energy{
+		@include setImg(43, 43);
+		background-image: url(../img/top/icon-energy.svg);
+		// text-shadow: 0 0 5px $color_main;
+		margin: -7px auto 14px;
+	}
+
 
 }
 

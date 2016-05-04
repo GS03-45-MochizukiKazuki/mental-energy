@@ -104,6 +104,15 @@ a{
 
 .env-pc{
 
+	.btn-energy{
+		// @include setImg(64/3, 64/3);
+		// background-image: url(../img/app/icon-energy.png);
+		// margin-top: -2px;
+		@include setImg(28, 28);
+		background-image: url(../img/app/icon-energy.svg);
+		// margin: -7px auto 14px;
+		margin-top: -5px;
+	}
 	header{
 		position: relative;
 		width: 100%;

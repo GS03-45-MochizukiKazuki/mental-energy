@@ -30,10 +30,10 @@ $app->run();
   <div id="container">
     <form id="login" action="" method="post">
       <p>
-        <input type="text" name="email" placeholder="email" value="<?= isset($app->getValues()->email) ? h($app->getValues()->email) : ''; ?>">
+        <input type="email" name="email" placeholder="email / test@gmail.com" autocapitalize="off" required autofocus="on" value="<?= isset($app->getValues()->email) ? h($app->getValues()->email) : ''; ?>">
       </p>
       <p>
-        <input type="password" name="password" placeholder="password">
+        <input type="password" name="password" placeholder="password / test">
       </p>
       <p class="err"><?= h($app->getErrors('login')); ?></p>
       <div class="btn">Log In</div>

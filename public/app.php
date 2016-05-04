@@ -114,7 +114,19 @@ $db = null;
 		</div>
 		<form class="genre__form genre-insert" action="assets/crud/insertGenre.php" method="post">
 			<input type="hidden" name="user_id" value="<?= $user_id ?>" />
-			<input class="genre__txt" type="text" name="genre" placeholder="genre"/><br/>
+			<input class="genre__txt" type="text" name="genre" placeholder="genre" autofocus="on" autocomplete="on" list="list-genre"/><br/>
+				<datalist id="list-genre">
+					<option value="服"></option>
+					<option value="睡眠"></option>
+					<option value="食事"></option>
+					<option value="通勤"></option>
+					<option value="テレビ"></option>
+					<option value="SNS"></option>
+					<option value="仕事"></option>
+					<option value="学校"></option>
+					<option value="勉強"></option>
+					<option value="休憩"></option>
+				</datalist>
 			<input class="genre__submit btn-positive hover-effect" type="submit" name="insertGenre" value="追加"/>
 			<input class="genre__cancel btn-negative hover-effect" type='button' name='cancel' class='cancel-btn' value='キャンセル'/>
 		</form>
@@ -138,8 +150,8 @@ $db = null;
 			<tr class="todo__tr">
 				<th class="todo__th"></th>
 				<!-- <th>ジャンル</th> -->
-				<th class="todo__th">シーン - when, where</th>
-				<th class="todo__th">アクション - what</th>
+				<th class="todo__th">シーン</th>
+				<th class="todo__th">アクション</th>
 			</tr>
 
 			<?php
@@ -171,8 +183,8 @@ $db = null;
 	</div>
 	<form class="todo-insert" action="assets/crud/insert.php" method="post">
 		<input type="hidden" name="user_id" value="<?= $user_id ?>" />
-		<input type="text" name="scene" placeholder="scene" /><br/>
-		<input type="text" name="action" placeholder="action"/><br/>
+		<input type="text" name="scene" placeholder="scene / いつ or どこで" autofocus="on"/><br/>
+		<input type="text" name="action" placeholder="action / 何をするのか"/><br/>
 		<input type="hidden" name="genre_id"/>
 		<input class="btn-positive hover-effect" type="submit" name="insert" value="追加"/>
 		<input class="btn-negative hover-effect" type='button' name='cancel' value='キャンセル'/>

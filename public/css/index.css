@@ -562,6 +562,14 @@ body {
     .env-pc .sec-manual .box .txt {
       text-align: left;
       font-size: 12px; }
+  .env-pc .sec-manual .icon-energy {
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: 43px, 43px;
+    width: 43px;
+    height: 43px;
+    background-image: url(../img/top/icon-energy.svg);
+    margin: -7px auto 14px; }
   .env-pc .separate-block {
     margin-top: 30px;
     margin-bottom: 50px; }
@@ -788,6 +796,14 @@ body {
     .env-sp .sec-manual .box .txt {
       text-align: left;
       font-size: 12px; }
+  .env-sp .sec-manual .icon-energy {
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: 43px, 43px;
+    width: 43px;
+    height: 43px;
+    background-image: url(../img/top/icon-energy.svg);
+    margin: -7px auto 14px; }
   .env-sp .separate-block {
     margin-top: 30px;
     margin-bottom: 50px; }
