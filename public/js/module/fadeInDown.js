@@ -42,5 +42,12 @@ $(window).scroll(function(){
 });
 
 
+// sp
+$('.env-sp .pc1').remove();
+$('.env-sp .pc2').remove();
+
+$('.env-sp .js-scrollTargetLeft').attr('class', 'js-scrollTarget');
+$('.env-sp .js-scrollTargetRight').attr('class', 'js-scrollTarget');
+
 
 })();

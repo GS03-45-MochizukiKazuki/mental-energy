@@ -1,6 +1,10 @@
 
 .env-sp{
 
+.pc1, .pc2{
+	display: none;
+}
+
 
 .sec-main{
 	$height_main: 450px;
@@ -93,7 +97,7 @@ $width-container: 300px;
 .sec-about{
 	line-height: 3;
 	color: $color-font;
-	margin-bottom: 100px;
+	margin-bottom: 60px;
 	.content-block{
 		width: $width-container;
 	}
@@ -105,7 +109,7 @@ $width-container: 300px;
 		// margin-bottom: 10px;
 	}
 	.box1{
-		margin-bottom: 100px;
+		margin-bottom: 30px;
 	}
 	.title{
 		font-size: 14px;
@@ -247,8 +251,8 @@ $width-container: 300px;
  * 登録ボタン
  * ====================================== */
 .btn-register{
-	margin-top: 100px;
-	margin-bottom: 150px;
+	margin-top: 50px;
+    margin-bottom: 100px;
 	font-size: 16px;
 	.button {
 		position: relative;

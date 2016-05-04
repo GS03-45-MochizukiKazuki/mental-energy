@@ -131,7 +131,7 @@ $width-container: 750px;
 		vertical-align: middle;
 	}
 	.pc1{
-		@include setImg(400/2, 802/2);
+		@include setImg(368/1.8, 768/1.8);
 		background-image: url(../img/top/about-iphone.png);
 		float: right;
 		margin-top: -30px;
@@ -139,6 +139,7 @@ $width-container: 750px;
 		right: 120px;
 	}
 	.pc2{
+		@include setImg(754/1.8, 620/1.8);
 		background-image: url(../img/top/about-pc.png);
 		float: left;
 		margin-top: -10px;

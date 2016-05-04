@@ -516,15 +516,20 @@ body {
     .env-pc .sec-about .pc1 {
       background-repeat: no-repeat;
       background-position: center center;
-      background-size: 200px, 401px;
-      width: 200px;
-      height: 401px;
+      background-size: 204.44444px, 426.66667px;
+      width: 204.44444px;
+      height: 426.66667px;
       background-image: url(../img/top/about-iphone.png);
       float: right;
       margin-top: -30px;
       position: relative;
       right: 120px; }
     .env-pc .sec-about .pc2 {
+      background-repeat: no-repeat;
+      background-position: center center;
+      background-size: 418.88889px, 344.44444px;
+      width: 418.88889px;
+      height: 344.44444px;
       background-image: url(../img/top/about-pc.png);
       float: left;
       margin-top: -10px; }
@@ -660,6 +665,8 @@ body {
   /* ======================================
  * canvas
  * ====================================== */ }
+  .env-sp .pc1, .env-sp .pc2 {
+    display: none; }
   .env-sp .sec-main {
     position: relative;
     overflow: hidden; }
@@ -726,7 +733,7 @@ body {
   .env-sp .sec-about {
     line-height: 3;
     color: #333;
-    margin-bottom: 100px; }
+    margin-bottom: 60px; }
     .env-sp .sec-about .content-block {
       width: 300px; }
     .env-sp .sec-about .box {
@@ -734,7 +741,7 @@ body {
     .env-sp .sec-about .box1 {
       margin-top: 20px; }
     .env-sp .sec-about .box1 {
-      margin-bottom: 100px; }
+      margin-bottom: 30px; }
     .env-sp .sec-about .title, .env-pc .sec-main .env-sp .sec-about .catchcopy, .env-sp .sec-about .sec-main .catchcopy, .env-sp .sec-main .sec-about .catchcopy {
       font-size: 14px;
       font-weight: bold; }
@@ -843,8 +850,8 @@ body {
   .env-sp .fa-check {
     top: 2px; }
   .env-sp .btn-register {
-    margin-top: 100px;
-    margin-bottom: 150px;
+    margin-top: 50px;
+    margin-bottom: 100px;
     font-size: 16px; }
     .env-sp .btn-register .button {
       position: relative;
