@@ -9,7 +9,7 @@ class Login extends \MyApp\Controller{
 		// login
 		if ($this->isLoggedIn()) {
 			// header('Location: ' . SITE_URL);
-			header('Location: ./app.php');
+			header('Location: ./app');
 			exit;
 		}
 
@@ -53,8 +53,8 @@ class Login extends \MyApp\Controller{
 
 			// redirect to home
 			// header('Location: ' . SITE_URL);
-			// header('Location: ' . SITE_URL . '/app.php');
-			header('Location: ./login.php'); // mentalenergy
+			// header('Location: ' . SITE_URL . '/app');
+			header('Location: ./login'); // mentalenergy
 			exit;
 
 		}

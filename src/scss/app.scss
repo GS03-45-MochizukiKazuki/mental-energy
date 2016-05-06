@@ -46,21 +46,28 @@ a{
 	content: '';
 	position: absolute;
 	width: 15px;
-	height: 2px;
+	height: 1px;
 	transform: rotate(45deg);
 	background-color: $color_font;
 	margin-top: 5px;
-	margin-left: -2px;
+	margin-left: -1px;
 }
 .is-inactive:after{
 	content: '';
 	position: absolute;
 	width: 15px;
-	height: 2px;
+	height: 1px;
 	transform: rotate(-45deg);
 	background-color: $color_font;
 	margin-top: 5px;
-	margin-left: -2px;
+	margin-left: -1px;
+}
+.env-sp{
+	.is-inactive:before,
+	.is-inactive:after{
+		width: 20px;
+		margin-top: 8px;
+	}
 }
 
 

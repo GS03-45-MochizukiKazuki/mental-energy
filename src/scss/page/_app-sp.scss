@@ -371,7 +371,9 @@ $z-menu-btn: 900;
 
 .slide-genre{
 	display: block;
-	position: absolute;
+	position: fixed;
+	top: 0;
+	left: 0;
 	z-index: $z-left;
 	background-color: $color_todo_bg;
 	box-shadow: 0px 0px 5px #333;

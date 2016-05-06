@@ -71,6 +71,23 @@ $('.sound').on('click', function(){
 
 audio.loop = true;
 
+audio.addEventListener("timeupdate", function(e){
+
+var rate = Math.floor(audio.duration / 5);
+var i = 1;
+var bar = '';
+while(i<=5) {
+	if ((i*rate) < audio.currentTime) {
+		bar = bar + "⭐️";
+	} else {
+		bar = bar + "☆";
+	}
+	i++;
+}
+console.log(audio.currentTime + '%');
+
+}, false);
+
 /* ======================================
  * menu
  * ====================================== */

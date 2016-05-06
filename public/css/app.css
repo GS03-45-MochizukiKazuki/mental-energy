@@ -25,7 +25,8 @@ input[type="text"] {
   color: #fff;
   font-weight: bold;
   background-color: #EA5504;
-  cursor: pointer; }
+  cursor: pointer;
+  -webkit-appearance: none; }
 
 .env-pc .btn-negative {
   width: 80px;
@@ -35,15 +36,17 @@ input[type="text"] {
   color: #333;
   font-weight: bold;
   background-color: #ccc;
-  cursor: pointer; }
+  cursor: pointer;
+  -webkit-appearance: none; }
 
 .env-pc .js-added_tr {
   height: 50px; }
 
 .env-sp input[type="radio"] {
-  -webkit-transform: scale(1.5);
-          transform: scale(1.5);
-  margin-left: 3px; }
+  width: 20px;
+  height: 20px;
+  margin-left: 3px;
+  margin-top: 5px; }
 
 .env-sp .btn-positive {
   width: 80px;
@@ -53,7 +56,8 @@ input[type="text"] {
   color: #fff;
   font-weight: bold;
   background-color: #EA5504;
-  cursor: pointer; }
+  cursor: pointer;
+  -webkit-appearance: none; }
 
 .env-sp .btn-negative {
   width: 80px;
@@ -63,7 +67,8 @@ input[type="text"] {
   color: #333;
   font-weight: bold;
   background-color: #ccc;
-  cursor: pointer; }
+  cursor: pointer;
+  -webkit-appearance: none; }
 
 .env-sp .js-added_tr {
   height: 50px; }
@@ -546,7 +551,9 @@ input[type="text"] {
     color: #fff; }
   .env-sp .slide-genre {
     display: block;
-    position: absolute;
+    position: fixed;
+    top: 0;
+    left: 0;
     z-index: 1000;
     background-color: #f8f8f8;
     box-shadow: 0px 0px 5px #333; }
@@ -587,23 +594,28 @@ a {
   content: '';
   position: absolute;
   width: 15px;
-  height: 2px;
+  height: 1px;
   -webkit-transform: rotate(45deg);
           transform: rotate(45deg);
   background-color: #333;
   margin-top: 5px;
-  margin-left: -2px; }
+  margin-left: -1px; }
 
 .is-inactive:after {
   content: '';
   position: absolute;
   width: 15px;
-  height: 2px;
+  height: 1px;
   -webkit-transform: rotate(-45deg);
           transform: rotate(-45deg);
   background-color: #333;
   margin-top: 5px;
-  margin-left: -2px; }
+  margin-left: -1px; }
+
+.env-sp .is-inactive:before,
+.env-sp .is-inactive:after {
+  width: 20px;
+  margin-top: 8px; }
 
 .env-pc {
   min-width: 800px;

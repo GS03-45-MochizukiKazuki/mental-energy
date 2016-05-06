@@ -36,7 +36,7 @@ $app->run();
       </p>
       <p class="err"><?= h($app->getErrors('password')); ?></p>
       <div class="btn">Sign Up</div>
-      <p class="fs12"><a href="./login.php">Log In</a></p>
+      <p class="fs12"><a href="./login">Log In</a></p>
       <input type="hidden" name="token" value="<?= h($_SESSION['token']); ?>"></input>
     </form>
   </div>

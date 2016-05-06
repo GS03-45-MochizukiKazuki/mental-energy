@@ -8,8 +8,8 @@ class Index extends \MyApp\Controller{
 	public function run(){
 		// not login
 		if (!$this->isLoggedIn()) {
-			// header('Location: ' . SITE_URL . '/login.php');
-			header('Location: ./login.php');
+			// header('Location: ' . SITE_URL . '/login');
+			header('Location: ./login');
 			exit;
 		}
 
