@@ -6,9 +6,9 @@ const sample = new Sample({
     name: 'world'
 });
 
-$('.wrapper').on('click', () => {
-    console.log(`hello, ${sample.name}.`);
-});
+// $('.wrapper').on('click', () => {
+//     console.log(`hello, ${sample.name}.`);
+// });
 
 const myConsole = new Console();
 myConsole.start();

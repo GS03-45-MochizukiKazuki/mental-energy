@@ -9,7 +9,7 @@ class Index extends \MyApp\Controller{
 		// not login
 		if (!$this->isLoggedIn()) {
 			// header('Location: ' . SITE_URL . '/login');
-			header('Location: ./login');
+			header('Location: ./login.php');
 			exit;
 		}
 

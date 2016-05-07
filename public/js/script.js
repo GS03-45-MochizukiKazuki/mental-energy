@@ -9935,44 +9935,44 @@ var _jquery2 = _interopRequireDefault(_jquery);
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
 var sample = new _Sample2.default({
-				name: 'world'
+	name: 'world'
 });
 
-(0, _jquery2.default)('.wrapper').on('click', function () {
-				console.log('hello, ' + sample.name + '.');
-});
+// $('.wrapper').on('click', () => {
+//     console.log(`hello, ${sample.name}.`);
+// });
 
 var myConsole = new _Console2.default();
 myConsole.start();
 
 // 端末判定
 if (navigator.userAgent.indexOf('iPhone') > 0 && navigator.userAgent.indexOf('iPad') == -1 || navigator.userAgent.indexOf('iPod') > 0 || navigator.userAgent.indexOf('Android') > 0) {
-				(0, _jquery2.default)('body').addClass('env-sp');
+	(0, _jquery2.default)('body').addClass('env-sp');
 } else {
-				(0, _jquery2.default)('body').addClass('env-pc');
+	(0, _jquery2.default)('body').addClass('env-pc');
 }
 
 // 指定位置まで移動
 (0, _jquery2.default)(function () {
-				(0, _jquery2.default)('a').click(function () {
-								var speed = 1000;
-								var href = (0, _jquery2.default)(this).attr("href");
-								var target = (0, _jquery2.default)(href == "#" || href == "" ? 'html' : href);
-								var position = target.offset().top;
-								(0, _jquery2.default)("html, body").animate({ scrollTop: position }, speed, "swing");
-								return false;
-				});
+	(0, _jquery2.default)('a').click(function () {
+		var speed = 1000;
+		var href = (0, _jquery2.default)(this).attr("href");
+		var target = (0, _jquery2.default)(href == "#" || href == "" ? 'html' : href);
+		var position = target.offset().top;
+		(0, _jquery2.default)("html, body").animate({ scrollTop: position }, speed, "swing");
+		return false;
+	});
 });
 
 // ga
 (0, _jquery2.default)('.btn-facebook').on('click', function () {
-				ga('send', 'event', 'share', 'click', 'facebook');
+	ga('send', 'event', 'share', 'click', 'facebook');
 });
 (0, _jquery2.default)('.btn-twitter').on('click', function () {
-				ga('send', 'event', 'share', 'click', 'twitter');
+	ga('send', 'event', 'share', 'click', 'twitter');
 });
 (0, _jquery2.default)('.btn-line').on('click', function () {
-				ga('send', 'event', 'share', 'click', 'line');
+	ga('send', 'event', 'share', 'click', 'line');
 });
 
 },{"./lib/Console":2,"./lib/Sample":3,"jquery":1}]},{},[4]);
