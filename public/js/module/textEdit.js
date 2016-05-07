@@ -53,7 +53,7 @@ function edit_toggle(){
             $next_td1.append( $next_input1 );
             $next_input1.val($next_text1);
         }
-        var $form = $("<form action='assets/crud/update.php' method='post'></form>");
+        var $form = $("<form action='../assets/crud/update.php' method='post'></form>");
         var $submit = $("<input type='submit' name='update' class='todo__submit-btn btn-positive hover-effect' value='保存'/>");
         var $cancel = $("<input type='button' name='cancel' class='todo__cancel-btn btn-negative hover-effect' value='キャンセル'/>");
         var $id_hidden = $("<input type='hidden' name='id' value='"+$selected_id+"'/>");

@@ -34,7 +34,7 @@ function edit_toggle(){
 
         var $selected_id = $(this).parent().data('genre-id');
 
-        var $form = $("<form action='assets/crud/updateGenre.php' method='post'></form>");
+        var $form = $("<form action='../assets/crud/updateGenre.php' method='post'></form>");
         var $submit = $("<input type='submit' name='update' class='genre-submit-btn btn-positive hover-effect' value='保存'/>");
         var $cancel = $("<input type='button' name='cancel' class='genre-cancel-btn btn-negative hover-effect' value='キャンセル'/>");
         var $id_hidden = $("<input type='hidden' name='genre_id' value='"+$selected_id+"'/>");

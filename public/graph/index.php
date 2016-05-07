@@ -1,5 +1,5 @@
 <?php 
-require_once(__DIR__ . '/config/config.php');
+require_once('../config/config.php');
 
 $app = new MyApp\Controller\Index();
 
@@ -13,11 +13,11 @@ $app->run();
 
 <head>
 <?php 
-include("assets/html/meta.html");
+include("../assets/html/meta.html");
  ?>
-<link rel="stylesheet" href="css/app.css">
-<link rel="stylesheet" href="css/archive.css">
-<link rel="stylesheet" href="css/graph.css">
+<link rel="stylesheet" href="../css/app.css">
+<link rel="stylesheet" href="../css/archive.css">
+<link rel="stylesheet" href="../css/graph.css">
 </head>
 
 <body>
@@ -26,15 +26,15 @@ include("assets/html/meta.html");
 $user_email = h($app->me()->email);
 $user_id = h($app->me()->id);
 $token_header = h($_SESSION['token']);
-include("assets/html/header.php");
+include("../assets/html/header.php");
  ?>
 <!-- body -->
 
 
 <?php 
 
-include("assets/pass.php");
-include("assets/func.php");
+include("../assets/pass.php");
+include("../assets/func.php");
 
 $db = db();
 $db->query("set names utf8"); // 文字化け対策
@@ -77,12 +77,12 @@ $db = null;
 </div><!-- .wrapper -->
 <!-- body -->
 <?php 
-include("assets/html/footer.html");
+include("../assets/html/footer.html");
  ?>
 <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
-<script src="js/module/chart.js"></script>
-<script src="js/app.js"></script>
-<script src="js/archive.js"></script>
+<script src="../js/module/chart.js"></script>
+<script src="../js/app.js"></script>
+<script src="../js/archive.js"></script>
 
 </body>
 </html>

@@ -32,7 +32,7 @@ $status = $update->execute();
 
 dbExecError($status,$update);
 
-header("Location: ../../archive.php");
+header("Location: ../../archive");
 exit;
 
 

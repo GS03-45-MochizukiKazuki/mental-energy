@@ -1,5 +1,5 @@
 <?php 
-require_once(__DIR__ . '/config/config.php');
+require_once('../config/config.php');
 
 $app = new MyApp\Controller\Index();
 
@@ -13,9 +13,9 @@ $app->run();
 
 <head>
 <?php 
-include("assets/html/meta.html");
+include("../assets/html/meta.html");
  ?>
-<link rel="stylesheet" href="css/app.css">	
+<link rel="stylesheet" href="../css/app.css">	
 </head>
 
 <body>
@@ -23,7 +23,7 @@ include("assets/html/meta.html");
 $user_email = h($app->me()->email);
 $user_id = h($app->me()->id);
 $token_header = h($_SESSION['token']);
-include("assets/html/header.php");
+include("../assets/html/header.php");
  ?>
 <!-- body -->
 
@@ -40,8 +40,8 @@ include("assets/html/header.php");
 
 <?php 
 
-include("assets/pass.php");
-include("assets/func.php");
+include("../assets/pass.php");
+include("../assets/func.php");
 
 $db = db();
 $db->query("set names utf8"); // 文字化け対策
@@ -90,7 +90,7 @@ $db = null;
 	<div class="genre">
 	
 		<!-- .genre delete -->
-		<form class="genre-delete" action="assets/crud/deleteGenre.php" method="get">
+		<form class="genre-delete" action="../assets/crud/deleteGenre.php" method="get">
 			<!-- .genre select -->
 			<h2 class="genre__ttl">ジャンル</h2>
 			<ul class="genre__list">
@@ -112,7 +112,7 @@ $db = null;
 		<div class="btn-genre">
 			<i class="fa fa-plus fa-2x btn-add" aria-hidden="true"></i>
 		</div>
-		<form class="genre__form genre-insert" action="assets/crud/insertGenre.php" method="post">
+		<form class="genre__form genre-insert" action="../assets/crud/insertGenre.php" method="post">
 			<input type="hidden" name="user_id" value="<?= $user_id ?>" />
 			<input class="genre__txt" type="text" name="genre" placeholder="genre" autofocus="on" autocomplete="on" list="list-genre"/><br/>
 				<datalist id="list-genre">
@@ -144,7 +144,7 @@ $db = null;
 	<h2 class="is-active"></h2>
 
 	<!-- delete -->
-	<form action="assets/crud/toArchive.php" method="post">
+	<form action="../assets/crud/toArchive.php" method="post">
 
 		<table class="todo__table">
 			<tr class="todo__tr">
@@ -181,7 +181,7 @@ $db = null;
 	<div class="btn-todo">
 		<i class="fa fa-plus fa-2x btn-add" aria-hidden="true"></i>
 	</div>
-	<form class="todo-insert" action="assets/crud/insert.php" method="post">
+	<form class="todo-insert" action="../assets/crud/insert.php" method="post">
 		<input type="hidden" name="user_id" value="<?= $user_id ?>" />
 		<input type="text" name="scene" placeholder="scene / いつ or どこで" autofocus="on"/><br/>
 		<input type="text" name="action" placeholder="action / 何をするのか"/><br/>
@@ -205,13 +205,13 @@ $db = null;
 
 <!-- body -->
 <?php 
-include("assets/html/footer.html");
+include("../assets/html/footer.html");
  ?>
 <script src="http://code.jquery.com/jquery-2.2.0.min.js"></script>
-<script src="js/module/textEdit.js"></script>
-<script src="js/module/textEditGenre.js"></script>
-<script src="js/module/changeGenre.js"></script>
-<script src="js/app.js"></script>
+<script src="../js/module/textEdit.js"></script>
+<script src="../js/module/textEditGenre.js"></script>
+<script src="../js/module/changeGenre.js"></script>
+<script src="../js/app.js"></script>
 <script>
 $('.btn-logout').on('click', function(){
   $('#logout').submit();

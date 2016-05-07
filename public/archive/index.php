@@ -1,5 +1,5 @@
 <?php 
-require_once(__DIR__ . '/config/config.php');
+require_once('../config/config.php');
 
 $app = new MyApp\Controller\Index();
 
@@ -13,11 +13,10 @@ $app->run();
 
 <head>
 <?php 
-include("assets/html/meta.html");
+include("../assets/html/meta.html");
  ?>
-<link rel="stylesheet" href="css/app.css">	
-<link rel="stylesheet" href="css/archive.css">
-<link rel="stylesheet" href="css/gallery.css">
+<link rel="stylesheet" href="../css/app.css">	
+<link rel="stylesheet" href="../css/archive.css">
 </head>
 
 <body>
@@ -26,22 +25,24 @@ include("assets/html/meta.html");
 $user_email = h($app->me()->email);
 $user_id = h($app->me()->id);
 $token_header = h($_SESSION['token']);
-include("assets/html/header.php");
+include("../assets/html/header.php");
  ?>
+<!-- body -->
+
 
 
 <?php 
 
-include("assets/pass.php");
-include("assets/func.php");
+include("../assets/pass.php");
+include("../assets/func.php");
 
 $db = db();
 $db->query("set names utf8"); // 文字化け対策
 
 // メインテーブル
 // カラム名重複のためasを使用
-$qry = "SELECT an.id, an.scene, an.action, an.archive_flag, genre.id AS genre_id, genre.name, users.id AS user_id, users.email FROM (an INNER JOIN genre ON an.genre_id = genre.id) INNER JOIN users ON an.user_id = users.id AND an.user_id = {$user_id} ORDER BY an.id;";
-// $qry = "SELECT an.id, an.scene, an.action, an.archive_flag, genre.id AS genre_id, genre.name FROM an INNER JOIN genre ON an.genre_id = genre.id ORDER BY an.id;";
+$qry = "SELECT an.id, an.scene, an.action, an.archive_flag, genre.id AS genre_id, genre.name, users.id AS user_id, users.email FROM (an INNER JOIN genre ON an.genre_id = genre.id) INNER JOIN users ON an.user_id = users.id AND an.archive_flag = 1 AND an.user_id = {$user_id} ORDER BY an.id;";
+// $qry = "SELECT an.id, an.scene, an.action, an.archive_flag, genre.id AS genre_id, genre.name FROM an INNER JOIN genre ON an.genre_id = genre.id AND an.archive_flag = 1 ORDER BY an.id;";
 // $qry = "SELECT * FROM an INNER JOIN genre ON an.genre_id = genre.id;";
 $data = $db->query($qry);
 
@@ -51,13 +52,6 @@ $data = $db->query($qry);
 
 <div class="sec-archive">
 	<!-- join -->
-
-	<div class="swith">
-		<div class="btn btn-all">all</div>	
-		<div class="btn btn-on">undone</div>	
-		<div class="btn btn-off">done</div>	
-	</div>
-
 	<div class="row-top">
 		<div class="headline column-s"></div>
 		<div class="headline column-s"></div>
@@ -81,7 +75,8 @@ $data = $db->query($qry);
 
 		// 削除ボタンのvalueに行と同じID番号を振る
 		print "<tr class=\"row-todo flag{$archive_flag}\" value=\"{$id}\" data-genre-id='{$genre_id}'>
-					<td class=\"icon-check column-s\"><i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i></td>
+					<td class=\"btn-undo column-s\"><i class=\"fa fa-undo\" aria-hidden=\"true\"></i></td>
+					<td class=\"btn-delete column-s\"><i class=\"fa fa-trash-o\" aria-hidden=\"true\"></i></td>
 			        <td class=\"td-genre column-m\">{$genre_name}</td>
 			        <td class=\"td-scene column-l\">{$scene}</td>
 			        <td class=\"td-action column-l\">{$action}</td>
@@ -94,11 +89,11 @@ $data = $db->query($qry);
 	</table>
 </div>
 
-<form class="form-undo" action="assets/crud/fromArchive.php" method="post">
+<form class="form-undo" action="../assets/crud/fromArchive.php" method="post">
 	<input type="hidden" name="archiveID" value=""/>
 	<input type="submit" name="undo"/>
 </form>
-<form class="form-delete" action="assets/crud/delete.php" method="post">
+<form class="form-delete" action="../assets/crud/delete.php" method="post">
 	<input type="hidden" name="archiveID" value=""/>
 	<input type="submit" name="delete"/>
 </form>
@@ -108,14 +103,12 @@ $data = $db->query($qry);
 </div><!-- .wrapper -->
 <!-- body -->
 <?php 
-include("assets/html/footer.html");
+include("../assets/html/footer.html");
  ?>
-<script src="js/module/textEdit.js"></script>
-<script src="js/module/changeGenre.js"></script>
-<script src="js/app.js"></script>
-<script src="js/archive.js"></script>
-<script src="js/gallery.js"></script>
-
+<script src="../js/module/textEdit.js"></script>
+<script src="../js/module/changeGenre.js"></script>
+<script src="../js/app.js"></script>
+<script src="../js/archive.js"></script>
 
 </body>
 </html>

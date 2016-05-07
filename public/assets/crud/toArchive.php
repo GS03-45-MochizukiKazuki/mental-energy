@@ -31,7 +31,7 @@ $status = $update->execute();
 
 dbExecError($status,$update);
 
-header("Location: ../../app.php");
+header("Location: ../../app");
 exit;
 
 

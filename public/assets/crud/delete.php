@@ -25,7 +25,7 @@ if($status==false){
   $error = $stmt->errorInfo();
   exit("QueryError:".$error[2]);
 }else{
-  header("Location: ../../archive.php");
+  header("Location: ../../archive");
   exit;
 
 }
