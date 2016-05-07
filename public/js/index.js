@@ -84,7 +84,7 @@ while(i<=5) {
 	}
 	i++;
 }
-console.log(audio.currentTime + '%');
+// console.log(audio.currentTime + '%');
 
 }, false);
 

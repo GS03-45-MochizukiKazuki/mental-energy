@@ -1,4 +1,5 @@
 import Sample from './lib/Sample';
+import Console from './lib/Console';
 import $ from 'jquery';
 
 const sample = new Sample({
@@ -6,8 +7,11 @@ const sample = new Sample({
 });
 
 $('.wrapper').on('click', () => {
-    // console.log(`hello, ${sample.name}.`);
+    console.log(`hello, ${sample.name}.`);
 });
+
+const myConsole = new Console();
+myConsole.start();
 
 
 // 端末判定
@@ -41,3 +45,5 @@ $('.btn-twitter').on('click', function(){
 $('.btn-line').on('click', function(){ 
     ga('send', 'event', 'share', 'click', 'line'); 
 });
+
+

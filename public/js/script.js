@@ -9843,6 +9843,61 @@ return jQuery;
 }));
 
 },{}],2:[function(require,module,exports){
+'use strict';
+
+Object.defineProperty(exports, "__esModule", {
+	value: true
+});
+
+var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
+
+function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
+
+// var Console = function(){
+// 	this.text = '\n  ■ ■ ■ ■      ■ ■          \n■         ■      ■     ■ ■  \n■              ■     ■     ■\n■     ■ ■ ■            ■    \n■         ■              ■  \n■         ■          ■     ■\n  ■ ■ ■ ■              ■ ■  \n';
+// };
+
+// Console.prototype.start = function() {
+
+// 	var color = '#0093E8';
+// 	function colorGen(){
+// 	    return '#'+Math.floor(Math.random()*16777215).toString(16);
+// 	}
+
+// 	setInterval(function(){
+// 		console.clear();
+// 		console.log('%c'+this.text, 'color:' + colorGen() + '; font-weight: bold; font-size: large;');
+// 	}, 1000);
+
+// };
+
+var Console = function () {
+	function Console() {
+		_classCallCheck(this, Console);
+	}
+
+	_createClass(Console, [{
+		key: 'start',
+		value: function start() {
+			var text = '\n  ■ ■ ■ ■      ■ ■          \n■         ■      ■     ■ ■  \n■              ■     ■     ■\n■     ■ ■ ■            ■    \n■         ■              ■  \n■         ■          ■     ■\n  ■ ■ ■ ■              ■ ■  \n';
+			var color = '#0093E8';
+			function colorGen() {
+				return '#' + Math.floor(Math.random() * 16777215).toString(16);
+			}
+
+			setInterval(function () {
+				console.clear();
+				console.log('%c' + text, 'color:' + colorGen() + '; font-weight: bold; font-size: large;');
+			}, 1000);
+		}
+	}]);
+
+	return Console;
+}();
+
+exports.default = Console;
+
+},{}],3:[function(require,module,exports){
 "use strict";
 
 Object.defineProperty(exports, "__esModule", {
@@ -9862,12 +9917,16 @@ var Sample = function Sample() {
 exports.default = Sample;
 ;
 
-},{}],3:[function(require,module,exports){
+},{}],4:[function(require,module,exports){
 'use strict';
 
 var _Sample = require('./lib/Sample');
 
 var _Sample2 = _interopRequireDefault(_Sample);
+
+var _Console = require('./lib/Console');
+
+var _Console2 = _interopRequireDefault(_Console);
 
 var _jquery = require('jquery');
 
@@ -9880,8 +9939,11 @@ var sample = new _Sample2.default({
 });
 
 (0, _jquery2.default)('.wrapper').on('click', function () {
-				// console.log(`hello, ${sample.name}.`);
+				console.log('hello, ' + sample.name + '.');
 });
+
+var myConsole = new _Console2.default();
+myConsole.start();
 
 // 端末判定
 if (navigator.userAgent.indexOf('iPhone') > 0 && navigator.userAgent.indexOf('iPad') == -1 || navigator.userAgent.indexOf('iPod') > 0 || navigator.userAgent.indexOf('Android') > 0) {
@@ -9913,4 +9975,4 @@ if (navigator.userAgent.indexOf('iPhone') > 0 && navigator.userAgent.indexOf('iP
 				ga('send', 'event', 'share', 'click', 'line');
 });
 
-},{"./lib/Sample":2,"jquery":1}]},{},[3]);
+},{"./lib/Console":2,"./lib/Sample":3,"jquery":1}]},{},[4]);
