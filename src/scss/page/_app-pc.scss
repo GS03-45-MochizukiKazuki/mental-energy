@@ -167,7 +167,7 @@ h2{
 	margin-bottom: 5px;
 }
 .todo__tr{
-	border-bottom: $color_bar 1px solid; 
+	border-bottom: $color_bar 1px solid;
 }
 td{
 	vertical-align: middle;
@@ -176,7 +176,7 @@ td{
 	padding: 3px;
 }
 .editable-tr{
-	border-bottom: #ccc 1px dotted; 
+	border-bottom: #ccc 1px dotted;
 	display: none;
 }
 
@@ -286,7 +286,7 @@ td:first-child{
 	display: none;
 	position: absolute;
 	top: 55px;
-	right: 17px;
+	right: 14px;
 	z-index: 999;
 }
 .btn-logout{

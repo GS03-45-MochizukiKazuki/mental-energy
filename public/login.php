@@ -1,4 +1,4 @@
-<?php 
+<?php
 
 // require_once(__DIR__ . '/../config/config.php');
 require_once(__DIR__ . '/config/config.php');
@@ -17,14 +17,14 @@ $app->run();
 <!DOCTYPE html>
 <html lang="ja">
 <head>
-  <?php 
+  <?php
   include("assets/html/meta.html");
   ?>
-  <link rel="stylesheet" href="css/app.css"> 
+  <link rel="stylesheet" href="css/app.css">
   <link rel="stylesheet" href="css/login.css">
 </head>
 <body>
-  <?php 
+  <?php
   include("assets/html/header.html");
    ?>
   <div id="container">
@@ -37,12 +37,12 @@ $app->run();
       </p>
       <p class="err"><?= h($app->getErrors('login')); ?></p>
       <div class="btn">Log In</div>
-      <p class="fs12"><a href="./signup.php">SIGN UP</a></p>
+      <p class="fs12"><a href="./signup">SIGN UP</a></p>
       <input type="hidden" name="token" value="<?= h($_SESSION['token']); ?>"></input>
     </form>
   </div>
 
-<?php 
+<?php
 include("assets/html/footer.html");
  ?>
 </body>
@@ -52,6 +52,6 @@ $('.btn').on('click', function(){
   $('#login').submit();
 });
 
-  
+
 </script>
 </html>

@@ -4,7 +4,7 @@
 namespace MyApp\Controller;
 
 class Signup extends \MyApp\Controller{
-	
+
 	public function run(){
 		// login
 		if ($this->isLoggedIn()) {
@@ -15,7 +15,7 @@ class Signup extends \MyApp\Controller{
 		if ($_SERVER['REQUEST_METHOD'] === 'POST') {
 			$this->postProcess();
 		}
-		
+
 	}
 
 	protected function postProcess() {
@@ -53,7 +53,7 @@ class Signup extends \MyApp\Controller{
 
 			// redirect to login
 			// header('Location: ' . SITE_URL . '/login');
-			header('Location: ./login.php');
+			header('Location: ./login');
 			exit;
 
 		}
@@ -96,4 +96,3 @@ $e->getMessage();
 http://php.net/manual/ja/exception.getmessage.php
 
 */
-

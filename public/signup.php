@@ -15,14 +15,14 @@ $app->run();
 <!DOCTYPE html>
 <html lang="ja">
 <head>
-  <?php 
+  <?php
   include("assets/html/meta.html");
   ?>
-  <link rel="stylesheet" href="css/app.css"> 
+  <link rel="stylesheet" href="css/app.css">
   <link rel="stylesheet" href="css/login.css">
 </head>
 <body>
-  <?php 
+  <?php
   include("assets/html/header.html");
    ?>
   <div id="container">
@@ -40,7 +40,7 @@ $app->run();
       <input type="hidden" name="token" value="<?= h($_SESSION['token']); ?>"></input>
     </form>
   </div>
-<?php 
+<?php
 include("assets/html/footer.html");
  ?>
 </body>
@@ -50,11 +50,11 @@ $('.btn').on('click', function(){
   $('#signup').submit();
 });
 
-  
+
 </script>
 </html>
 
-<!-- 
+<!--
 CSRF
 http://qiita.com/singlestroke/items/b38f9f9f9b62f2522539
  -->

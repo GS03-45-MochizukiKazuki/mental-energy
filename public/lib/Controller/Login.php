@@ -4,19 +4,19 @@
 namespace MyApp\Controller;
 
 class Login extends \MyApp\Controller{
-	
+
 	public function run(){
 		// login
 		if ($this->isLoggedIn()) {
 			// header('Location: ' . SITE_URL);
-			header('Location: ./app.php');
+			header('Location: ./app');
 			exit;
 		}
 
 		if ($_SERVER['REQUEST_METHOD'] === 'POST') {
 			$this->postProcess();
 		}
-		
+
 	}
 
 	protected function postProcess() {
@@ -104,4 +104,3 @@ http://php.net/manual/ja/function.session-regenerate-id.php
 
 
 */
-
