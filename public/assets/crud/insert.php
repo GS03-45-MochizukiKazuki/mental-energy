@@ -39,7 +39,7 @@ dbExecError($status,$stmt);
 
 //4．データ登録処理後
 //フォームの再送信を防げる
-header("Location: ../../app.php");
+header("Location: ../../app");
 exit;
 
 ?>
