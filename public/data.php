@@ -1,4 +1,4 @@
-<?php 
+<?php
 require_once(__DIR__ . '/config/config.php');
 
 $app = new MyApp\Controller\Index();
@@ -26,7 +26,7 @@ $app->run();
 	<div id="percent" class=""></div>
 </main>
 
-<?php 
+<?php
 $user_email = h($app->me()->email);
 $user_id = h($app->me()->id);
 
@@ -79,7 +79,8 @@ $db = null;
 
 
 
-<script src="http://code.jquery.com/jquery-2.2.0.min.js"></script>
+<script src="//code.jquery.com/jquery-2.2.0.min.js"></script>
+<!-- <script src="http://code.jquery.com/jquery-2.2.0.min.js"></script> -->
 <script src="js/lib/createjs.min.js"></script>
 <script src="js/lib/ColorFilter.js"></script>
 <script src="js/lib/particleEmitterJs-0.5.0-custom.js"></script>
@@ -89,8 +90,3 @@ $db = null;
 
 </body>
 </html>
-
-
-
-
-

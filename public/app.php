@@ -211,7 +211,8 @@ include("assets/html/footer.html");
  ?>
 
 <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBV1oDNauJ4OZ1ghKsTL6jZVhhS9lig738"></script>
-<script src="http://code.jquery.com/jquery-2.2.0.min.js"></script>
+<script src="//code.jquery.com/jquery-2.2.0.min.js"></script>
+<!-- <script src="http://code.jquery.com/jquery-2.2.0.min.js"></script> -->
 <script src="js/module/GetLatlng.js"></script>
 <script src="js/module/textEdit.js"></script>
 <script src="js/module/textEditGenre.js"></script>

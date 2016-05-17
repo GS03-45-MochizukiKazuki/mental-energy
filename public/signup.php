@@ -44,7 +44,8 @@ $app->run();
 include("assets/html/footer.html");
  ?>
 </body>
-<script src="http://code.jquery.com/jquery-2.2.0.min.js"></script>
+<script src="//code.jquery.com/jquery-2.2.0.min.js"></script>
+<!-- <script src="http://code.jquery.com/jquery-2.2.0.min.js"></script> -->
 <script>
 $('.btn').on('click', function(){
   $('#signup').submit();
