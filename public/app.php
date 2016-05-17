@@ -1,4 +1,4 @@
-<?php 
+<?php
 require_once(__DIR__ . '/config/config.php');
 
 $app = new MyApp\Controller\Index();
@@ -12,14 +12,14 @@ $app->run();
 <html lang="ja">
 
 <head>
-<?php 
+<?php
 include("assets/html/meta.html");
  ?>
-<link rel="stylesheet" href="css/app.css">	
+<link rel="stylesheet" href="css/app.css">
 </head>
 
 <body>
-<?php 
+<?php
 $user_email = h($app->me()->email);
 $user_id = h($app->me()->id);
 $token_header = h($_SESSION['token']);
@@ -38,7 +38,7 @@ include("assets/html/header.php");
 </ul> -->
 
 
-<?php 
+<?php
 
 include("assets/pass.php");
 include("assets/func.php");
@@ -60,7 +60,7 @@ $qry_id = "SELECT * FROM an WHERE archive_flag = 0 AND an.user_id = {$user_id} A
 $data_id = $db->query($qry_id);
 ?>
 
-<?php 
+<?php
 while($value_id = $data_id->fetch()){
 	$id = $value_id["id"];
 	print "<span data-radio-id={$id} class=\"radio-check\"></span>";
@@ -86,15 +86,15 @@ $db = null;
 			</li>
 		</ul>
 	</div><!-- .rule -->
-	
+
 	<div class="genre">
-	
+
 		<!-- .genre delete -->
 		<form class="genre-delete" action="assets/crud/deleteGenre.php" method="get">
 			<!-- .genre select -->
 			<h2 class="genre__ttl">ジャンル</h2>
 			<ul class="genre__list">
-				<?php 
+				<?php
 				while($value_genre = $data_genre->fetch()){
 					$id = $value_genre["id"];
 					$name = $value_genre["name"];
@@ -107,7 +107,7 @@ $db = null;
 			</ul>
 			<input class="btn-negative hover-effect" type="submit" name="deleteGenre" value="削除"/>
 		</form>
-	
+
 		<!-- .genre insert -->
 		<div class="btn-genre">
 			<i class="fa fa-plus fa-2x btn-add" aria-hidden="true"></i>
@@ -130,10 +130,10 @@ $db = null;
 			<input class="genre__submit btn-positive hover-effect" type="submit" name="insertGenre" value="追加"/>
 			<input class="genre__cancel btn-negative hover-effect" type='button' name='cancel' class='cancel-btn' value='キャンセル'/>
 		</form>
-	
+
 	</div><!-- .genre -->
 
-</div>	
+</div>
 </div><!-- .content-left -->
 
 
@@ -185,7 +185,9 @@ $db = null;
 		<input type="hidden" name="user_id" value="<?= $user_id ?>" />
 		<input type="text" name="scene" placeholder="scene / いつ or どこで" autofocus="on"/><br/>
 		<input type="text" name="action" placeholder="action / 何をするのか"/><br/>
-		<input type="hidden" name="genre_id"/>
+    <input type="hidden" name="genre_id"/>
+    <input type="hidden" name="lat" class="lat"/>
+		<input type="hidden" name="lng" class="lng"/>
 		<input class="btn-positive hover-effect" type="submit" name="insert" value="追加"/>
 		<input class="btn-negative hover-effect" type='button' name='cancel' value='キャンセル'/>
 	</form>
@@ -204,10 +206,13 @@ $db = null;
 
 
 <!-- body -->
-<?php 
+<?php
 include("assets/html/footer.html");
  ?>
+
+<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBV1oDNauJ4OZ1ghKsTL6jZVhhS9lig738"></script>
 <script src="http://code.jquery.com/jquery-2.2.0.min.js"></script>
+<script src="js/module/GetLatlng.js"></script>
 <script src="js/module/textEdit.js"></script>
 <script src="js/module/textEditGenre.js"></script>
 <script src="js/module/changeGenre.js"></script>
@@ -217,20 +222,7 @@ $('.btn-logout').on('click', function(){
   $('#logout').submit();
 });
 
-  
+
 </script>
 </body>
 </html>
-
-
-
-
-
-
-
-
-
-
-
-
-

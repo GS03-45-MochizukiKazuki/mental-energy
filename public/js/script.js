@@ -9943,7 +9943,7 @@ var sample = new _Sample2.default({
 // });
 
 var myConsole = new _Console2.default();
-myConsole.start();
+// myConsole.start();
 
 // 端末判定
 if (navigator.userAgent.indexOf('iPhone') > 0 && navigator.userAgent.indexOf('iPad') == -1 || navigator.userAgent.indexOf('iPod') > 0 || navigator.userAgent.indexOf('Android') > 0) {
