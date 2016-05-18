@@ -14,6 +14,8 @@ create table an (
 	scene varchar(255),
 	action varchar(255),
 	archive_flag int(1) not null,
+	lat decimal(9,6),
+	lng decimal(9,6),
 	indate datetime(6)
 )
 

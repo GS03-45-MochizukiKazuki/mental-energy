@@ -8,9 +8,10 @@
         <i class="fa fa-cog fa-2x fa-fw"></i>
       </div>
       <ul class="menu-list">
-        <li class="item"><a href="archive">アーカイブを見る</a></li>
-        <li class="item"><a href="gallery">一覧を見る</a></li>
-        <li class="item"><a href="graph">グラフを見る</a></li>
+        <li class="item"><a href="archive">Archive</a></li>
+        <li class="item"><a href="gallery">Gallery</a></li>
+        <li class="item"><a href="map">Map</a></li>
+        <li class="item"><a href="graph">Graph</a></li>
         <li class="item pc btn-energy"><a href="data"></a></li>
         <!-- <li class="item pc"><a href="data"><i class="fa fa-smile-o" aria-hidden="true"></i></a></li> -->
         <li class="item btn-setting"><i class="fa fa-sign-out fa-2x" aria-hidden="true"></i></li>

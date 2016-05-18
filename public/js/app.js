@@ -60,7 +60,7 @@ $('.btn-setting').on('click', function(){
 		$setting.fadeOut();
 		flag_setting = true;
 	}
-	
+
 });
 
 $('.btn-logout').on('click', function(){
@@ -134,8 +134,16 @@ $('input[type="radio"]').each(function(){
 		if ( $(this).data('radio-id') == $inactiveAry[i] ) {
 			$(this).addClass('is-inactive');
 			$(this).attr('disabled', 'true');
-		}		
+		}
 	}
+});
+
+/* ======================================
+ * 位置の取得
+ * ====================================== */
+
+$('input[name="scene"]').on('keydown focus', function(){
+	GetLatlng.start();
 });
 
 
