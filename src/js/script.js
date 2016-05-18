@@ -11,7 +11,7 @@ const sample = new Sample({
 // });
 
 const myConsole = new Console();
-myConsole.start();
+// myConsole.start();
 
 
 // 端末判定
@@ -36,14 +36,12 @@ $(function(){
 
 
 // ga
-$('.btn-facebook').on('click', function(){ 
-    ga('send', 'event', 'share', 'click', 'facebook'); 
+$('.btn-facebook').on('click', function(){
+    ga('send', 'event', 'share', 'click', 'facebook');
 });
-$('.btn-twitter').on('click', function(){ 
-    ga('send', 'event', 'share', 'click', 'twitter'); 
+$('.btn-twitter').on('click', function(){
+    ga('send', 'event', 'share', 'click', 'twitter');
 });
-$('.btn-line').on('click', function(){ 
-    ga('send', 'event', 'share', 'click', 'line'); 
+$('.btn-line').on('click', function(){
+    ga('send', 'event', 'share', 'click', 'line');
 });
-
-
