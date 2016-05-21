@@ -31,7 +31,8 @@ var GetLatlng = (function(){
         2: "電波状況などで位置情報が取得できませんでした…。" ,
         3: "位置情報の取得に時間がかかり過ぎてタイムアウトしました…。" ,
       } ;
-      alert( errorMessage[error.code] ) ;
+      console.log( errorMessage[error.code] ) ;
+    //   alert( errorMessage[error.code] ) ;
     }
 
   }
