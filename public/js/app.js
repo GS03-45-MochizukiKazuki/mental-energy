@@ -142,10 +142,13 @@ $('input[type="radio"]').each(function(){
  * 位置の取得
  * ====================================== */
 
+GetLatlng.start();
 $('input[name="scene"]').on('keydown focus', function(){
 	GetLatlng.start();
 });
-
+$('.btn-todo').on('click', function(){
+	GetLatlng.start();
+});
 
 
 

@@ -9,7 +9,6 @@ var CreateMap = (function(){
     var $action = $('.td-action');
     var $lat = $('.td-lat');
     var $lng = $('.td-lng');
-    var ruleAry = [];
     locations = new Array($scene.length);
     for (var i = 0; i < locations.length; i++){
       locations[i] = new Array(4);
@@ -21,23 +20,56 @@ var CreateMap = (function(){
       locations[i][2] = $lat[i].innerHTML;
       locations[i][3] = $lng[i].innerHTML;
     }
-    // locations.push(ruleAry);
 
     console.log(locations);
 
     // console.log($scene[0].innerHTML);
+    var customMapTypeId = 'custom_style';
+    var mapOptions = {
+      center: null,
+      scaleControl: true,
+      mapTypeControlOptions: {
+        mapTypeIds: [google.maps.MapTypeId.ROADMAP, customMapTypeId]
+      },
+      mapTypeId: customMapTypeId
+    };
+    // オリジナルデザイン
+    var featureOpts = [
+      {
+        stylers: [
+          { hue: '#FFF700' },
+          { visibility: 'simplified' },
+          { gamma: 0.5 },
+          { weight: 0.5 }
+        ]
+      },
+      {
+        elementType: 'labels',
+        stylers: [
+          { visibility: 'simplified' }
+        ]
+      },
+      {
+        featureType: 'road.local',
+        stylers: [
+          { color: '#FFF700' }
+        ]
+      }
+    ];
+    // オリジナルデザインの名前
+    var styledMapOptions = {
+        name: "Mental Energy"
+    };
 
-    // var locations = [
-    //    ['東京タワー', 35.658581, 139.745433],
-    //    ['スカイツリー', 35.789966, 139.821961],
-    //    ['東京ドーム', 35.705471, 139.751801],
-    //    ['ランドマークタワー', 35.454948, 139.631429]
-    // ];
-
-    var map = new google.maps.Map(document.getElementById('map'));
+    var map = new google.maps.Map(document.getElementById('map'), mapOptions);
     var bounds = new google.maps.LatLngBounds();
     var infoWindow = new google.maps.InfoWindow();
     var marker;
+
+    // オリジナルデザインをセット
+    var customMapType = new google.maps.StyledMapType(featureOpts, styledMapOptions);
+    map.mapTypes.set(customMapTypeId, customMapType);
+    map.setMapTypeId(customMapTypeId);
 
     for (var i = 0; i < locations.length; i++) {
       marker = new google.maps.Marker({

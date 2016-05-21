@@ -34,26 +34,28 @@ create table users (
 )
 
 
-INSERT INTO an (genre_id, user_id, scene, action, archive_flag, indate) VALUES (1, 1, '6:00', '起床', 0, now());
-INSERT INTO an (genre_id, user_id, scene, action, archive_flag, indate) VALUES (1, 1, '12:00', '昼寝', 0, now());
-INSERT INTO an (genre_id, user_id, scene, action, archive_flag, indate) VALUES (1, 1, '15分眠れない', '30分読書', 0, now());
+INSERT INTO an (genre_id, user_id, scene, action, archive_flag, lat, lng, indate) VALUES (1, 1, '6:00', '起床', 0, 35.658581, 139.745433, '2016-05-10 01:31:54.000000');
+INSERT INTO an (genre_id, user_id, scene, action, archive_flag, lat, lng, indate) VALUES (1, 1, '12:00', '昼寝', 0, 35.658670, 139.745340, '2016-05-10 01:31:54.000000');
+INSERT INTO an (genre_id, user_id, scene, action, archive_flag, lat, lng, indate) VALUES (1, 1, '15分眠れない', '30分読書', 0, 35.658375, 139.745620, '2016-05-10 01:31:54.000000');
 
-INSERT INTO an (genre_id, user_id, scene, action, archive_flag, indate) VALUES (2, 1, '13:00（昼食）', '事務所近くの蕎麦屋', 0, now());
-INSERT INTO an (genre_id, user_id, scene, action, archive_flag, indate) VALUES (2, 1, '起床から15:00まで', 'コーヒー', 0, now());
+INSERT INTO an (genre_id, user_id, scene, action, archive_flag, lat, lng, indate) VALUES (2, 1, '13:00（昼食）', '事務所近くの蕎麦屋', 0, 35.660703, 139.729254, '2016-05-10 01:31:54.000000');
+INSERT INTO an (genre_id, user_id, scene, action, archive_flag, lat, lng, indate) VALUES (2, 1, '起床から15:00まで', 'コーヒー', 0, 35.660825, 139.729143, '2016-05-10 01:31:54.000000');
 
-INSERT INTO an (genre_id, user_id, scene, action, archive_flag, indate) VALUES (3, 1, 'アウター', '黒のジャケット + 白のYシャツ', 0, now());
-INSERT INTO an (genre_id, user_id, scene, action, archive_flag, indate) VALUES (3, 1, 'パンツ', 'Levi’sのジーンズ', 0, now());
-INSERT INTO an (genre_id, user_id, scene, action, archive_flag, indate) VALUES (3, 1, '靴', 'new balance M99X シリーズ', 0, now());
+INSERT INTO an (genre_id, user_id, scene, action, archive_flag, lat, lng, indate) VALUES (3, 1, 'アウター', '黒のジャケット + 白のYシャツ', 0, 35.660516, 139.729580, '2016-05-10 01:31:54.000000');
+INSERT INTO an (genre_id, user_id, scene, action, archive_flag, lat, lng, indate) VALUES (3, 1, 'パンツ', 'Levi’sのジーンズ', 0, 35.660935, 139.729640, '2016-05-10 01:31:54.000000');
+INSERT INTO an (genre_id, user_id, scene, action, archive_flag, lat, lng, indate) VALUES (3, 1, '靴', 'new balance M99X シリーズ', 0, 35.660250, 139.729530, '2016-05-10 01:31:54.000000');
 
-INSERT INTO an (genre_id, user_id, scene, action, archive_flag, indate) VALUES (4, 1, '通勤（行き）', '英会話リスニング', 0, now());
-INSERT INTO an (genre_id, user_id, scene, action, archive_flag, indate) VALUES (4, 1, '通勤（帰り）', '読書', 0, now());
+INSERT INTO an (genre_id, user_id, scene, action, archive_flag, lat, lng, indate) VALUES (4, 1, '通勤（行き）', '英会話リスニング', 0, 35.698705, 139.766222, '2016-05-10 01:31:54.000000');
+INSERT INTO an (genre_id, user_id, scene, action, archive_flag, lat, lng, indate) VALUES (4, 1, '通勤（帰り）', '読書', 0, 35.698220, 139.766540, '2016-05-10 01:31:54.000000');
 
-INSERT INTO an (genre_id, user_id, scene, action, archive_flag, indate) VALUES (5, 1, '生放送', '基本見ない。見たい番組は録画する。', 0, now());
+INSERT INTO an (genre_id, user_id, scene, action, archive_flag, lat, lng, indate) VALUES (5, 1, '生放送', '基本見ない。見たい番組は録画する。', 0, 35.698330, 139.766410, '2016-05-10 01:31:54.000000');
 
-INSERT INTO an (genre_id, user_id, scene, action, archive_flag, indate) VALUES (6, 1, 'DMなし', 'チェックは1時間に1回（3分以内）まで', 0, now());
+INSERT INTO an (genre_id, user_id, scene, action, archive_flag, lat, lng, indate) VALUES (6, 1, 'DMなし', 'チェックは1時間に1回（3分以内）まで', 0, 35.710270, 139.777095, '2016-05-10 01:31:54.000000');
 
-INSERT INTO an (genre_id, user_id, scene, action, archive_flag, indate) VALUES (7, 1, '煮詰まったとき', 'スタバxxx店でxxxを飲む', 0, now());
+INSERT INTO an (genre_id, user_id, scene, action, archive_flag, lat, lng, indate) VALUES (7, 1, '煮詰まったとき', 'スタバxxx店でxxxを飲む', 0, 35.710590, 139.777470, '2016-05-10 01:31:54.000000');
 
+INSERT INTO an (genre_id, user_id, scene, action, archive_flag, lat, lng, indate) VALUES (8, 1, 'テスト', 'テスト', 0, 35.664909, 139.762148, '2016-05-10 01:31:54.000000');
+INSERT INTO an (genre_id, user_id, scene, action, archive_flag, lat, lng, indate) VALUES (8, 1, 'テスト', 'テスト', 0, 35.664220, 139.762560, '2016-05-10 01:31:54.000000');
 
 
 desc users;

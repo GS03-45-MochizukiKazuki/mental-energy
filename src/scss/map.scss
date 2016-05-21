@@ -1,13 +1,25 @@
 table{
   display: none;
 }
+.wrapper{
+  height: 100%;
+  width: 100%;
+}
+// #dummy{
+//   position: relative;
+//   width: 100%;
+//   height: 50px;
+// }
+#map{
+  position: relative;
+  margin: 0 auto;
+  width: 100%;
+}
 
 .env-pc{
-
-  #map{
-    margin: 0 auto;
-    width: 100vw;
-    height: 100vh;
+  .wrapper{
+    height: 100%;
+    width: 100%;
   }
 
 }
@@ -15,7 +27,16 @@ table{
 
 
 .env-sp{
+  .wrapper{
+    height: auto;
+    width: 100%;
+  }
 
-
+  .btn-sp-menu{
+    right: 5px;
+  }
+  .menu-trigger{
+    display: none;
+  }
 
 }

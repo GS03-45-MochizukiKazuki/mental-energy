@@ -38,13 +38,14 @@ $db = db();
 $db->query("set names utf8"); // 文字化け対策
 
 // メインテーブル
-$qry = "SELECT * FROM an WHERE archive_flag = 0 AND an.user_id = {$user_id}";
+$qry = "SELECT * FROM an WHERE an.user_id = {$user_id}";
 $data = $db->query($qry);
 
 ?>
 
 
 <div id="map"></div>
+<div id="dummy"></div>
 
 
 <table>
@@ -82,7 +83,8 @@ $db = null;
 include("assets/html/footer.html");
  ?>
 
-<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBV1oDNauJ4OZ1ghKsTL6jZVhhS9lig738"></script>
+<script src="//maps.googleapis.com/maps/api/js?key=AIzaSyBV1oDNauJ4OZ1ghKsTL6jZVhhS9lig738"></script>
+<script src="//code.jquery.com/jquery-2.2.0.min.js"></script>
 <script src="js/module/CreateMap.js"></script>
 <script src="js/app.js"></script>
 <script src="js/map.js"></script>
