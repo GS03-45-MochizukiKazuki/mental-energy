@@ -83,8 +83,11 @@ $db = null;
 include("assets/html/footer.html");
  ?>
 
-<script src="//maps.googleapis.com/maps/api/js?key=AIzaSyBV1oDNauJ4OZ1ghKsTL6jZVhhS9lig738"></script>
+<!-- <script src="//maps.googleapis.com/maps/api/js?sensor=false&libraries=geometry?key=AIzaSyBV1oDNauJ4OZ1ghKsTL6jZVhhS9lig738"></script> -->
+<script src="//maps.googleapis.com/maps/api/js?sensor=false&libraries=geometry"></script>
+<!-- <script src="http://maps.google.com/maps/api/js?sensor=false&libraries=geometry?key=AIzaSyBV1oDNauJ4OZ1ghKsTL6jZVhhS9lig738"></script> -->
 <script src="//code.jquery.com/jquery-2.2.0.min.js"></script>
+<script src="js/module/Notif.js"></script>
 <script src="js/module/CreateMap.js"></script>
 <script src="js/app.js"></script>
 <script src="js/map.js"></script>
