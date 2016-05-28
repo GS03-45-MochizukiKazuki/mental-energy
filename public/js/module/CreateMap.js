@@ -111,9 +111,17 @@ var CreateMap = (function(){
 
     // var destinations = [];
 
+    // オリジナルマーカー
+    var icon = new google.maps.MarkerImage('./img/map/map_pin_shadow.png',
+        new google.maps.Size(50,50),
+        new google.maps.Point(0,0),
+        new google.maps.Point(0,0)
+    );
+
     for (var i = 0; i < locations.length; i++) {
       marker = new google.maps.Marker({
         position: new google.maps.LatLng(locations[i][2], locations[i][3]),
+        icon: icon,
         map: map
       });
       // 地図表示領域をマーカー位置に合わせて拡大
@@ -123,7 +131,7 @@ var CreateMap = (function(){
 
       google.maps.event.addListener(marker, 'click', (function(marker, i) {
         return function() {
-          infoWindow.setContent('シーン ： ' + locations[i][0] + '<br>' + 'アクション ： ' + locations[i][1]);
+          infoWindow.setContent('シーン　　 ： ' + locations[i][0] + '<br>' + 'アクション ： ' + locations[i][1]);
           infoWindow.open(map, marker);
         }
       })(marker, i));
@@ -146,7 +154,7 @@ var CreateMap = (function(){
           distances[j] = google.maps.geometry.spherical.computeDistanceBetween(currentPos, destinations[j]);
           console.log(distances[j]);
 
-          if (distances[j] < 5000) {
+          if (distances[j] < 100) {
               var nearScene = locations[j][0]
               var nearAction = locations[j][1]
               Notif.show(nearScene, nearAction);

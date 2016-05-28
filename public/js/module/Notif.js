@@ -14,10 +14,10 @@ var Notif = (function(){
 
         // 通知インスタンス生成
         var instance = new Notification(
-            "マイルールを登録した場所です！", // 通知タイトル
+            "以下のルールを登録した場所です！", // 通知タイトル
             {
-                body: "SCENE : " + scene + "\n" + "ACTION : " + action, // 通知内容
-                icon: "http://mental-energy.jp/img/common/logo.png", // アイコン
+                body: "SCENE  : " + scene + "\n" + "ACTION : " + action, // 通知内容
+                icon: "./img/logo.png", // アイコン
             }
         );
 
