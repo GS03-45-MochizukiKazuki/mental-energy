@@ -55,16 +55,24 @@ $qry_genre = "SELECT * FROM genre WHERE genre.user_id = {$user_id}";
 // $qry_genre = "SELECT * FROM genre";
 $data_genre = $db->query($qry_genre);
 
-// id
+// inactive checkbox 1週間未満
 $qry_id = "SELECT * FROM an WHERE archive_flag = 0 AND an.user_id = {$user_id} AND (indate > (NOW() - INTERVAL 7 DAY))";
 $data_id = $db->query($qry_id);
-?>
 
-<?php
 while($value_id = $data_id->fetch()){
 	$id = $value_id["id"];
 	print "<span data-radio-id={$id} class=\"radio-check\"></span>";
 }
+
+// push通知 7-8日後
+$qry_push_id = "SELECT * FROM an WHERE archive_flag = 0 AND an.user_id = {$user_id} AND (indate <= (NOW() - INTERVAL 7 DAY)) AND (indate > (NOW() - INTERVAL 8 DAY))";
+$data_push_id = $db->query($qry_push_id);
+
+while($value_id = $data_push_id->fetch()){
+	$id_push = $value_id["id"];
+	print "<span data-radio-id={$id_push} class=\"push-afterWeek\"></span>";
+}
+
 $db = null;
 ?>
 
@@ -183,7 +191,7 @@ $db = null;
 	</div>
 	<form class="todo-insert" action="assets/crud/insert.php" method="post">
 		<input type="hidden" name="user_id" value="<?= $user_id ?>" />
-		<input type="text" name="scene" placeholder="scene / いつ or どこで" autofocus="on"/><br/>
+		<input type="text" name="scene" placeholder="scene / どんな場面で" autofocus="on"/><br/>
 		<input type="text" name="action" placeholder="action / 何をするのか"/><br/>
     <input type="hidden" name="genre_id"/>
     <input type="hidden" name="lat" class="lat"/>
@@ -213,6 +221,7 @@ include("assets/html/footer.html");
 <script src="//maps.googleapis.com/maps/api/js?key=AIzaSyBV1oDNauJ4OZ1ghKsTL6jZVhhS9lig738"></script>
 <script src="//code.jquery.com/jquery-2.2.0.min.js"></script>
 <!-- <script src="http://code.jquery.com/jquery-2.2.0.min.js"></script> -->
+<script src="js/module/NotifDate.js"></script>
 <script src="js/module/GetLatlng.js"></script>
 <script src="js/module/textEdit.js"></script>
 <script src="js/module/textEditGenre.js"></script>

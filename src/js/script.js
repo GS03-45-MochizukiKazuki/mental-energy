@@ -11,7 +11,7 @@ const sample = new Sample({
 // });
 
 const myConsole = new Console();
-// myConsole.start();
+myConsole.start();
 
 
 // 端末判定

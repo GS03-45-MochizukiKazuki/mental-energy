@@ -44,7 +44,7 @@ $(window).scroll(function(){
  * ====================================== */
 var audio = document.getElementById("bgm");
 
-var musicFlag = true;
+var musicFlag = false;
 var $bgm_on = $('.fa-volume-up');
 var $bgm_off = $('.fa-volume-off');
 
@@ -66,7 +66,7 @@ $('.sound').on('click', function(){
 	}else{
 		audio.pause();
 	}
-	
+
 });
 
 audio.loop = true;
@@ -111,13 +111,3 @@ $menu.on('click', function(){
 
 
 })();
-
-
-
-
-
-
-
-
-	
-

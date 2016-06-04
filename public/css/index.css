@@ -478,10 +478,10 @@ body {
       .env-pc .sec-main .sound i {
         position: absolute; }
       .env-pc .sec-main .sound .fa-volume-up {
-        right: 9px; }
-      .env-pc .sec-main .sound .fa-volume-off {
-        right: 0;
+        right: 9px;
         display: none; }
+      .env-pc .sec-main .sound .fa-volume-off {
+        right: 0; }
   .env-pc .sec-about {
     line-height: 3;
     color: #333;
@@ -726,10 +726,10 @@ body {
         position: absolute;
         font-size: 24px; }
       .env-sp .sec-main .sound .fa-volume-up {
-        right: 7px; }
-      .env-sp .sec-main .sound .fa-volume-off {
-        right: 0;
+        right: 7px;
         display: none; }
+      .env-sp .sec-main .sound .fa-volume-off {
+        right: 0; }
   .env-sp .sec-about {
     line-height: 3;
     color: #333;

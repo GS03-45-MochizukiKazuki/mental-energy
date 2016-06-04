@@ -150,7 +150,23 @@ $('.btn-todo').on('click', function(){
 	GetLatlng.start();
 });
 
+/* ======================================
+ * 一週間後のプッシュ通知
+ * ====================================== */
+var pushIdAry = [];
+$('.push-afterWeek').each(function(){
+	var pushId = $(this).data('radio-id')
+	pushIdAry.push(pushId);
 
+	var $target = $('input[type="radio"]').filter('[data-radio-id='+pushId+']').parent();
+	var pushScene = $target.next().text();
+	var pushAction = $target.next().next().text();
+
+	NotifDate.show(pushScene, pushAction);
+})
+
+
+// console.log(pushIdAry);
 
 
 
